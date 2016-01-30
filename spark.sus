@@ -1,0 +1,8 @@
+# spark is a system we can use to actually install these dotfiles -- selectively, if need be
+card all {
+  spark card composekey
+}
+
+card composekey {
+  XCompose
+}
