@@ -1,8 +1,16 @@
 # spark is a system we can use to actually install these dotfiles -- selectively, if need be
 card all {
-  spark card composekey
+  into ~
+  spark card unicode
+  spark card git
 }
 
-card composekey {
-  XCompose
+# compose key & other unicode delights
+card unicode {
+  .XCompose
+}
+
+# git stuff!
+card git {
+  .gitconfig
 }
