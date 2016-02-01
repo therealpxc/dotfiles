@@ -1,4 +1,4 @@
-# spark is a system we can use to actually install these dotfiles -- selectively, if need be
+# some cards activated by this one require git submodules to be initialized
 card all {
   into ~
   spark card unicode
@@ -18,16 +18,19 @@ card git {
 }
 
 card fish {
+  {
     into .config
     outof config
     
     # fish itself
     fish/config.fish
     fish/functions/fzf_key_bindings.fish
-    
+
     # oh-my-fish
     omf/bundle
     omf/theme 
+  }
+  misc-git/oh-my-fish -> .local/share/omf
 }
 
 card fonts {
