@@ -27,7 +27,12 @@ card fish {
 	outof fish
 
 	config.fish
-	functions
+
+	{
+	  into functions
+	  outof functions
+	  fzf_key_bindings.fish
+	}
     }
 
     # omf
