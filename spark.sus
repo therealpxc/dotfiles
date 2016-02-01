@@ -4,6 +4,7 @@ card all {
   spark card unicode
   spark card git
   spark card fish
+  spark card fonts
 }
 
 # compose key & other unicode delights
@@ -36,5 +37,19 @@ card fish {
 	
 	bundle
 	theme
+    }
+}
+
+card fonts {
+    # powerline stuff
+    outof misc-git/powerline/font
+    {
+        into .local/share/fonts
+	PowerlineSymbols.otf
+    }
+
+    {
+    	into .config/fontconfig/conf.d
+	10-powerline-symbols.conf
     }
 }

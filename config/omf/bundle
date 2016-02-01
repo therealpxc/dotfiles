@@ -13,4 +13,5 @@ package kill-on-port
 package limap
 package set_color
 theme default
+theme hogan
 theme zish
