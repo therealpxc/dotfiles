@@ -22,39 +22,18 @@ card fish {
     outof config
     
     # fish itself
-    {
-    	into fish
-	outof fish
-
-	config.fish
-
-	{
-	  into functions
-	  outof functions
-	  fzf_key_bindings.fish
-	}
-    }
-
-    # omf
-    {
- 	into omf
-	outof omf
-	
-	bundle
-	theme
-    }
+    fish/config.fish
+    fish/functions/fzf_key_bindings.fish
+    
+    # oh-my-fish
+    omf/bundle
+    omf/theme 
 }
 
 card fonts {
     # powerline stuff
     outof misc-git/powerline/font
-    {
-        into .local/share/fonts
-	PowerlineSymbols.otf
-    }
 
-    {
-    	into .config/fontconfig/conf.d
-	10-powerline-symbols.conf
-    }
+    PowerlineSymbols.otf -> .local/share/fonts/PowerlineSymbols.otf
+    10-powerline-symbols.conf -> .config/fontconfig/conf.d/10-powerline-symbols.conf
 }
