@@ -3,6 +3,7 @@ card all {
   into ~
   spark card unicode
   spark card git
+  spark card fish
 }
 
 # compose key & other unicode delights
@@ -13,4 +14,27 @@ card unicode {
 # git stuff!
 card git {
   .gitconfig
+}
+
+card fish {
+    into .config
+    outof config
+    
+    # fish itself
+    {
+    	into fish
+	outof fish
+
+	config.fish
+	functions
+    }
+
+    # omf
+    {
+ 	into omf
+	outof omf
+	
+	bundle
+	theme
+    }
 }
