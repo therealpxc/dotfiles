@@ -1,0 +1,3 @@
+package fonts
+package fzf
+theme default
