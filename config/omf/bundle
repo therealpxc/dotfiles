@@ -11,5 +11,6 @@ package getopts
 package kill-on-port
 package limap
 package set_color
+package vcs
 theme bobthefish
 theme default
