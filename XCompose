@@ -641,29 +641,34 @@
 
 # not sure why anyone would want this, but it’s nostalgic
 <Multi_key> <bar> <bar>    : "¦" brokenbar
+
 # Default system mappings for the current locale
 include "%L"
+
+# the structure of pointless-xcompose is changed, because non-xim input methods mostly ignore
+# includes anyway... commenting out the includes below. I'll be pulling the lines we want from
+# xcompose in https://github.com/AKielhorn/pointless-xcompose anyway
 
 # Abbreviations
 #include "/usr/local/share/X11/locale/pointless-xcompose/abbrevs.xcompose"
 
 # Pretty arrows
-include "/usr/local/share/X11/locale/pointless-xcompose/arrows.xcompose"
+#include "/usr/local/share/X11/locale/pointless-xcompose/arrows.xcompose"
 
 # Bullets and list markers
-include "/usr/local/share/X11/locale/pointless-xcompose/bullets.xcompose"
+#include "/usr/local/share/X11/locale/pointless-xcompose/bullets.xcompose"
 
 # Special dashes and hyphens
-include "/usr/local/share/X11/locale/pointless-xcompose/dashes-hyphens.xcompose"
+#include "/usr/local/share/X11/locale/pointless-xcompose/dashes-hyphens.xcompose"
 ## Disabled/incomplete mappings from dashes-hyphens.xcompose
 # <Multi_key>  <>: "‧" U2027 # HYPHENATION POINT
 ##
 
 # Cute drawings (currently just check-mark and uncheck-mark)
-include "/usr/local/share/X11/locale/pointless-xcompose/dingbats.xcompose"
+#include "/usr/local/share/X11/locale/pointless-xcompose/dingbats.xcompose"
 
 # Normal characters with circles and parentheses around them
-include "/usr/local/share/X11/locale/pointless-xcompose/enclosed.xcompose"
+#include "/usr/local/share/X11/locale/pointless-xcompose/enclosed.xcompose"
 ## Disabled mappings from enclosed.xcompose
 # Various of those two‐digit period forms have prefix‐conflicts with X
 # sequences for fractions.
@@ -680,17 +685,17 @@ include "/usr/local/share/X11/locale/pointless-xcompose/enclosed.xcompose"
 ##
 
 # Invisible characters
-include "/usr/local/share/X11/locale/pointless-xcompose/invisible.xcompose"
+#include "/usr/local/share/X11/locale/pointless-xcompose/invisible.xcompose"
 ## Disabled/incomplete mappings from invisible.xcompose
 # 4/18 of an em
 # <Multi_key> <space> <>: " " U205F # MEDIUM MATHEMATICAL SPACE
 ##
 
 # Fractions!
-include "/usr/local/share/X11/locale/pointless-xcompose/fractions.xcompose"
+#include "/usr/local/share/X11/locale/pointless-xcompose/fractions.xcompose"
 
 # Math symbols
-include "/usr/local/share/X11/locale/pointless-xcompose/math.xcompose"
+#include "/usr/local/share/X11/locale/pointless-xcompose/math.xcompose"
 ## Disabled/incomplete mappings from math.xcompose
 # Set operators
 # =============
@@ -827,7 +832,7 @@ include "/usr/local/share/X11/locale/pointless-xcompose/math.xcompose"
 
 
 # Typographic symbols (single quotation marks and stuff)
-include "/usr/local/share/X11/locale/pointless-xcompose/typographic.xcompose"
+#include "/usr/local/share/X11/locale/pointless-xcompose/typographic.xcompose"
 ## Disabled/incomplete mappings from typography.xcompose
 # X default will map both ?! and !? to interrobang «‽».  Here we set one
 # of them to the U2E18 gnaborretni «⸘» instead.
