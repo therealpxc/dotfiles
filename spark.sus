@@ -55,4 +55,7 @@ card misc {
 		.kde/share/config/kdeglobals
 		# kde5 globals
 		.config/kdeglobals
+
+    # map capslock to compose in KDE
+		.config/kxkbrc
 }
