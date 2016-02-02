@@ -50,4 +50,9 @@ card misc {
 		.fresh/source/freshshell/fresh
 		.config/gtkrc
 		.config/gtkrc-2.0
+
+		# kde4 globals
+		.kde/share/config/kdeglobals
+		# kde5 globals
+		.config/kdeglobals
 }
