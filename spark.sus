@@ -5,6 +5,7 @@ card all {
   spark card git
   spark card fish
   spark card fonts
+	spark card misc
 }
 
 # compose key & other unicode delights
@@ -40,4 +41,12 @@ card fonts {
 
     PowerlineSymbols.otf -> .local/share/fonts/PowerlineSymbols.otf
     10-powerline-symbols.conf -> .config/fontconfig/conf.d/10-powerline-symbols.conf
+}
+
+card misc {
+    .byobu/keybindings.tmux
+
+		# dem fresh lines
+		.freshrc
+		.fresh/source/freshshell/fresh
 }
