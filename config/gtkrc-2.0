@@ -1,4 +1,4 @@
-# created by KDE, Tue Feb 2 11:46:03 2016
+# created by KDE, Tue Feb 2 13:47:51 2016
 #
 # If you do not want KDE to override your GTK settings, select
 # Appearance -> Colors in the System Settings and disable the checkbox
@@ -7,6 +7,10 @@
 #
 
 gtk-alternative-button-order = 1
+
+include "/run/current-system/sw/share/themes/Breeze/gtk-2.0/gtkrc"
+
+gtk-theme-name="Breeze"
 
 style "default"
 {
