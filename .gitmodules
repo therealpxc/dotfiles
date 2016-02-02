@@ -4,3 +4,6 @@
 [submodule "misc-git/oh-my-fish"]
 	path = misc-git/oh-my-fish
 	url = git@github.com:oh-my-fish/oh-my-fish.git
+[submodule "fresh/source/freshshell/fresh"]
+	path = fresh/source/freshshell/fresh
+	url = https://github.com/freshshell/fresh
