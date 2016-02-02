@@ -29,8 +29,7 @@ card fish {
 		fish/functions/fish_user_key_bindings.fish
 
     # oh-my-fish
-    omf/bundle
-    omf/theme 
+    omf
   }
   misc-git/oh-my-fish -> .local/share/omf
 }
@@ -49,4 +48,6 @@ card misc {
 		# dem fresh lines
 		.freshrc
 		.fresh/source/freshshell/fresh
+		.config/gtkrc
+		.config/gtkrc-2.0
 }
