@@ -10,6 +10,7 @@ package gem
 package getopts
 package kill-on-port
 package limap
+package local-config
 package set_color
 package vcs
 theme bobthefish
