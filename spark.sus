@@ -58,4 +58,7 @@ card misc {
 
     # map capslock to compose in KDE
 		.config/kxkbrc
+		
+		.tmux.conf
+		.tmux.conf -> .byobu/.tmux.conf
 }
