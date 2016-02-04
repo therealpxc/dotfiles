@@ -3,3 +3,5 @@
 	email = pxcallahan@gmail.com
 [push]
 	default = simple
+[remote-hg]
+	hg-git-compat = true
