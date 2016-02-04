@@ -102,13 +102,16 @@ Theme=breeze-dark
 
 [KDE]
 DoubleClickInterval=400
+LookAndFeelPackage=org.kde.breezedark.desktop
+ShowDeleteCommand=false
 ShowIconsInMenuItems=true
 ShowIconsOnPushButtons=true
-SingleClick=true
+SingleClick=false
 StartDragDist=4
 StartDragTime=500
 WheelScrollLines=3
 contrast=4
+widgetStyle=Breeze
 
 [Toolbar style]
 ToolButtonStyle=TextBesideIcon
