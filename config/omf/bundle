@@ -8,6 +8,7 @@ package foreign-env
 package fzf
 package gem
 package getopts
+package https://github.com/therealpxc/tmux-zen
 package kill-on-port
 package limap
 package local-config
