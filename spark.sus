@@ -61,4 +61,7 @@ card misc {
 		
 		.tmux.conf
 		.tmux.conf -> .byobu/.tmux.conf
+
+		.kde/share/apps/konsole/Naked.profile
+		".kde/share/apps/konsole/Transparent Linux Colors.colorscheme"
 }
