@@ -1,0 +1,22 @@
+[$Version]
+update_info=yakuake.upd:2.9.9-startupnotification
+
+[Desktop Entry]
+DefaultProfile=Shell.profile
+
+[Dialogs]
+FirstRun=false
+
+[Favorite Profiles]
+Favorites=
+
+# we want to disable the close-session shortcut since it
+# conflicts with konsolepart's, even though it does the
+# exact same thing
+[Shortcuts]
+close-session=none
+
+[Window]
+Height=100
+KeepAbove=false
+Width=100
