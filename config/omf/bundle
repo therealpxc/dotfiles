@@ -3,6 +3,7 @@ package bang-bang
 package basename-compat
 package errno
 package export
+package fasd
 package fonts
 package foreign-env
 package fzf
