@@ -5,3 +5,4 @@
 	default = simple
 [remote-hg]
 	hg-git-compat = true
+	track-branches = true
