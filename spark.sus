@@ -65,4 +65,5 @@ card misc {
 		.kde/share/apps/konsole/Naked.profile
 		".kde/share/apps/konsole/Transparent Linux Colors.colorscheme"
 		.kde/share/config/yakuakerc
+		.nixpkgs/config.nix
 }
