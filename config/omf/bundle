@@ -10,6 +10,7 @@ package gem
 package getopts
 package grc
 package https://github.com/therealpxc/tmux-zen
+package hub
 package kill-on-port
 package limap
 package local-config
