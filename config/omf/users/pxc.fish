@@ -5,3 +5,5 @@
 alias j z				# aka jay-z
 alias grep ag   # I always forget to type the right thing, but ag is faster and mostly compatible
 alias ls "ls --color=auto"
+alias kquitapp kquitapp5
+
