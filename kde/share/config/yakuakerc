@@ -1,6 +1,10 @@
 [$Version]
 update_info=yakuake.upd:2.9.9-startupnotification
 
+[Appearance]
+Skin=default
+Translucency=true
+
 [Desktop Entry]
 DefaultProfile=Shell.profile
 
