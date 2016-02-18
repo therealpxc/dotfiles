@@ -5,6 +5,7 @@ card all {
   spark card git
   spark card fish
   spark card fonts
+	spark card nix
 	spark card misc
 }
 
@@ -42,6 +43,10 @@ card fonts {
     10-powerline-symbols.conf -> .config/fontconfig/conf.d/10-powerline-symbols.conf
 }
 
+card nix {
+    .nixpkgs
+}
+
 card misc {
     .byobu/keybindings.tmux
 
@@ -65,5 +70,4 @@ card misc {
 		.kde/share/apps/konsole/Naked.profile
 		".kde/share/apps/konsole/Transparent Linux Colors.colorscheme"
 		.kde/share/config/yakuakerc
-		.nixpkgs/config.nix
 }
