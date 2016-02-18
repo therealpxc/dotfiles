@@ -1,0 +1,19 @@
+[Desktop Entry]
+DefaultProfile=Naked.profile
+
+[Favorite Profiles]
+Favorites=Shell.profile,Naked.profile,Bash.profile
+
+[KonsoleWindow]
+ShowMenuBarByDefault=false
+
+[MainWindow]
+Height 1200=1028
+Height 1920=1247
+State=AAAA/wAAAAD9AAAAAAAAA+4AAAPnAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+Width 1200=792
+Width 1920=1006
+
+[TabBar]
+TabBarVisibility=ShowTabBarWhenNeeded
