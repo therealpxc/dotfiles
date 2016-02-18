@@ -2,7 +2,6 @@
 DisplayNames=
 LayoutList=
 LayoutLoopCount=-1
-Model=thinkpadz60
 Options=terminate:ctrl_alt_bksp,compose:caps
 ResetOldOptions=true
 ShowFlag=false
