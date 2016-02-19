@@ -1,0 +1,15 @@
+[Desktop Entry]
+DefaultProfile=Naked.profile
+
+[Favorite Profiles]
+Favorites=Naked.profile,Bash.profile,Shell.profile
+
+[KonsoleWindow]
+ShowMenuBarByDefault=false
+
+[MainWindow]
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+
+[TabBar]
+TabBarVisibility=ShowTabBarWhenNeeded

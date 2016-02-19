@@ -12,7 +12,7 @@ DefaultProfile=Shell.profile
 FirstRun=false
 
 [Favorite Profiles]
-Favorites=Naked.profile,Shell.profile
+Favorites=
 
 [Shortcuts]
 close-session=none
@@ -20,5 +20,7 @@ close-session=none
 [Window]
 Height=100
 KeepAbove=false
+KeepOpen=true
+Screen=0
 ShowTabBar=false
 Width=100
