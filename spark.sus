@@ -74,4 +74,5 @@ card misc {
 		.local/share/konsole/Naked.profile
 		".local/share/konsole/Transparent Linux Colors.colorscheme"
 		.config/konsolerc
+		.config/quassel-irc.org/settings.qss
 }
