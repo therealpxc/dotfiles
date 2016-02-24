@@ -1,1 +1,5 @@
-{ allowUnfree = true; }
+with import <nixpkgs> {};
+{
+  allowUnfree = true;
+}
+
