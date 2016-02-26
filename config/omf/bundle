@@ -10,13 +10,14 @@ package fzf
 package gem
 package getopts
 package grc
-package https://github.com/therealpxc/tmux-zen
+package https://github.com/oh-my-fish/plugin-config
 package hub
 package kill-on-port
 package limap
 package local-config
 package set_color
 package technicolor
+package tmux-zen
 package vcs
 theme bobthefish
 theme default
