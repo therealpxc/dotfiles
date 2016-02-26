@@ -5,4 +5,4 @@ set -gx OMF_PATH "/home/pxc/.local/share/omf"
 #set -gx OMF_CONFIG "/home/pxc/.config/omf"
 
 # Load oh-my-fish configuration.
-source $OMF_PATH/init.fish
+#source $OMF_PATH/init.fish
