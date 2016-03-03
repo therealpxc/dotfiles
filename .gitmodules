@@ -3,7 +3,8 @@
 	url = https://github.com/powerline/powerline.git
 [submodule "misc-git/oh-my-fish"]
 	path = misc-git/oh-my-fish
-	url = git@github.com:oh-my-fish/oh-my-fish.git
+#	url = git@github.com:oh-my-fish/oh-my-fish.git
+  url = git@gitlab.com:therealpxc/oh-my-fish.git
 [submodule "fresh/source/freshshell/fresh"]
 	path = fresh/source/freshshell/fresh
 	url = https://github.com/freshshell/fresh
