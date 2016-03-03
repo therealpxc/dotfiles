@@ -6,7 +6,7 @@ Skin=default
 Translucency=true
 
 [Desktop Entry]
-DefaultProfile=Shell.profile
+DefaultProfile=Naked.profile
 
 [Dialogs]
 FirstRun=false
