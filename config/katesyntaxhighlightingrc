@@ -1,0 +1,37 @@
+[Default Item Styles - Schema KDE]
+Alert=ffda4453,ffda4453,1,,,,ff4d1f24,-,,---
+Annotation=ff7f8c8d,ffbdc3c7,,,,,-,-,,---
+Attribute=ff2980b9,fffdbc4b,,,,,-,-,,---
+Base-N Integer=fff67400,fff67400,,,,,-,-,,---
+Built-in=ff7f8c8d,ffbdc3c7,,,,,-,-,,---
+Character=ff3daee9,fffcfcfc,,,,,-,-,,---
+Comment=ffbdc3c7,ffeff0f1,,,,,-,-,,---
+Comment Variable=ff7f8c8d,ffbdc3c7,,,,,-,-,,---
+Constant=ffeff0f1,ffeff0f1,1,,,,-,-,,---
+Control Flow=ffeff0f1,ffeff0f1,1,,,,-,-,,---
+Data Type=ff2980b9,fffdbc4b,,,,,-,-,,---
+Decimal/Value=fff67400,fff67400,,,,,-,-,,---
+Documentation=ffda4453,ffda4453,,,,,-,-,,---
+Extension=ff0095ff,ffeff0f1,1,,,,-,-,,---
+Floating Point=fff67400,fff67400,,,,,-,-,,---
+Function=fff67400,fff67400,,,,,-,-,,---
+Import=ff7f8c8d,ffbdc3c7,,,,,-,-,,---
+Information=fff67400,fff67400,,,,,-,-,,---
+Keyword=ffeff0f1,ffeff0f1,1,,,,-,-,,---
+Normal=ffeff0f1,ffeff0f1,,,,,-,-,,---
+Operator=ffeff0f1,ffeff0f1,,,,,-,-,,---
+Others=ff27ae60,ff27ae60,,,,,-,-,,---
+Preprocessor=ff27ae60,ff27ae60,,,,,-,-,,---
+Region Marker=ff2980b9,fffdbc4b,,,,,ff153042,-,,---
+Special Character=ff3daee9,fffcfcfc,,,,,-,-,,---
+Special String=ffda4453,ffda4453,,,,,-,-,,---
+String=ffda4453,ffda4453,,,,,-,-,,---
+Variable=ff2980b9,fffdbc4b,,,,,-,-,,---
+Verbatim String=ffda4453,ffda4453,,,,,-,-,,---
+Warning=ffda4453,ffda4453,,,,,-,-,,---
+
+[Highlighting None - Schema KDE]
+Normal Text=0,,,,,,,,,,---
+
+[Highlighting None - Schema Normal]
+Normal Text=0,,,,,,,,,,---

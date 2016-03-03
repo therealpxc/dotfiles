@@ -1,0 +1,5 @@
+[KDE]
+dummy=prevent-empty-group
+
+[Normal]
+dummy=prevent-empty-group

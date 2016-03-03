@@ -77,4 +77,11 @@ card misc {
 		.config/quassel-irc.org/settings.qss
 
 		.config/khotkeysrc
+		
+		.config/katevirc
+                .config/katesyntaxhighlightingrc
+                .config/katerc
+                .config/kateschemarc
+                .config/katemetainfos
+                .config/katepartrc
 }
