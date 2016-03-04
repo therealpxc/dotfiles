@@ -2,6 +2,7 @@
 update_info=yakuake.upd:2.9.9-startupnotification
 
 [Appearance]
+BackgroundColorOpacity=100
 Skin=default
 Translucency=true
 
