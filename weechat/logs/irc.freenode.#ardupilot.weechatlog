@@ -1,0 +1,338 @@
+2016-03-30 15:09:47	-->	pxc (~pxc@wsip-68-14-243-77.ph.ph.cox.net) has joined #ardupilot
+2016-03-30 15:09:47	--	Topic for #ardupilot is "Diydrones.com"
+2016-03-30 15:09:47	--	Topic set by zbayne on Tue, 21 Feb 2012 16:21:26
+2016-03-30 15:09:47	--	Channel #ardupilot: 27 nicks (0 ops, 0 voices, 27 normals)
+2016-03-30 15:09:50	--	Channel created on Mon, 07 Feb 2011 10:58:31
+2016-03-30 16:37:20	-->	foobarbecue (~quassel@129.138.146.14) has joined #ardupilot
+2016-03-30 16:58:43	-->	Kabouik_ (~quassel@65.76.93.92.rev.sfr.net) has joined #ardupilot
+2016-03-30 18:14:06	-->	TCC_Kaschimer (~Mutter@d4-50-49-248.evv.wideopenwest.com) has joined #ardupilot
+2016-03-30 18:21:03	<--	TCC_Kaschimer (~Mutter@d4-50-49-248.evv.wideopenwest.com) has quit (Remote host closed the connection)
+2016-03-30 18:23:54	<--	Kabouik_ (~quassel@65.76.93.92.rev.sfr.net) has quit (Ping timeout: 250 seconds)
+2016-03-30 20:29:08	-->	legonigel_ (~legonigel@pool-74-99-89-111.nrflva.fios.verizon.net) has joined #ardupilot
+2016-03-30 20:32:46	<--	R34lB0rg (tom@78.41.115.150) has quit (Read error: Connection reset by peer)
+2016-03-30 20:32:50	<--	legonigel (~legonigel@unaffiliated/legonigel-nix/x-1491755) has quit (Ping timeout: 246 seconds)
+2016-03-30 20:33:27	-->	R34lB0rg (~tom@78.41.115.150) has joined #ardupilot
+2016-03-30 20:56:52	-->	g_Dio_ (~g_Dio@unaffiliated/g-dio/x-2471043) has joined #ardupilot
+2016-03-30 20:59:31	<--	g_Dio (~g_Dio@unaffiliated/g-dio/x-2471043) has quit (Ping timeout: 248 seconds)
+2016-03-30 21:43:24	<--	R34lB0rg (~tom@78.41.115.150) has quit (Quit: I shouldn't really be here - dircproxy 1.2.0)
+2016-03-30 21:43:30	-->	R34lB0rg (tom@78.41.115.150) has joined #ardupilot
+2016-03-30 22:31:32	-->	tridge (~tridge@pdpc/supporter/professional/tridge) has joined #ardupilot
+2016-03-30 22:45:02	<--	foobarbecue (~quassel@129.138.146.14) has quit (Ping timeout: 260 seconds)
+2016-03-30 23:07:50	-->	foobarbecue (~quassel@97-123-238-47.albq.qwest.net) has joined #ardupilot
+2016-03-31 00:05:54	<--	foobarbecue (~quassel@97-123-238-47.albq.qwest.net) has quit (Ping timeout: 260 seconds)
+2016-03-31 01:46:02	-->	Kabouik_ (~quassel@147.99.219.229) has joined #ardupilot
+2016-03-31 03:28:24	<--	tridge (~tridge@pdpc/supporter/professional/tridge) has quit (Ping timeout: 244 seconds)
+2016-03-31 03:48:08	-->	g_Dio_afk (~g_Dio@unaffiliated/g-dio/x-2471043) has joined #ardupilot
+2016-03-31 03:50:59	-->	tridge (~tridge@pdpc/supporter/professional/tridge) has joined #ardupilot
+2016-03-31 03:51:39	<--	g_Dio_ (~g_Dio@unaffiliated/g-dio/x-2471043) has quit (Ping timeout: 260 seconds)
+2016-03-31 04:04:21	--	irc: disconnected from server
+2016-03-31 04:06:06	-->	pxc (~pxc@wsip-68-14-243-77.ph.ph.cox.net) has joined #ardupilot
+2016-03-31 04:06:06	--	Topic for #ardupilot is "Diydrones.com"
+2016-03-31 04:06:07	--	Topic set by zbayne on Tue, 21 Feb 2012 16:21:26
+2016-03-31 04:06:07	--	Channel #ardupilot: 29 nicks (0 ops, 0 voices, 29 normals)
+2016-03-31 04:06:09	--	Channel created on Mon, 07 Feb 2011 10:58:31
+2016-03-31 04:10:27	<--	Kabouik_ (~quassel@147.99.219.229) has quit (Remote host closed the connection)
+2016-03-31 04:10:43	-->	Kabouik (~quassel@147.99.219.229) has joined #ardupilot
+2016-03-31 05:17:15	-->	kerwood_wk (~mjj@c-76-21-166-25.hsd1.md.comcast.net) has joined #ardupilot
+2016-03-31 05:37:29	<--	kerwood_wk (~mjj@c-76-21-166-25.hsd1.md.comcast.net) has quit (Quit: WeeChat 0.4.2)
+2016-03-31 06:32:38	-->	kerwood_wk (~mjj@c-76-21-166-25.hsd1.md.comcast.net) has joined #ardupilot
+2016-03-31 06:33:18	<--	kerwood_wk (~mjj@c-76-21-166-25.hsd1.md.comcast.net) has quit (Client Quit)
+2016-03-31 06:33:33	-->	kerwood_wk (~mjj@c-76-21-166-25.hsd1.md.comcast.net) has joined #ardupilot
+2016-03-31 06:47:28	-->	dhfj (~dhfj@41.143.80.168) has joined #ardupilot
+2016-03-31 06:48:09	<--	dhfj (~dhfj@41.143.80.168) has quit (Max SendQ exceeded)
+2016-03-31 06:48:53	-->	rvho (~rvho@41.143.80.168) has joined #ardupilot
+2016-03-31 06:49:28	<--	rvho (~rvho@41.143.80.168) has quit (Max SendQ exceeded)
+2016-03-31 06:50:11	-->	Chui (~Chui@AAubervilliers-151-1-17-160.w83-114.abo.wanadoo.fr) has joined #ardupilot
+2016-03-31 06:50:30	<--	Chui (~Chui@AAubervilliers-151-1-17-160.w83-114.abo.wanadoo.fr) has quit (Max SendQ exceeded)
+2016-03-31 06:51:14	-->	Oughj (~Oughj@9.208-241-81.adsl-dyn.isp.belgacom.be) has joined #ardupilot
+2016-03-31 06:51:19	<--	Oughj (~Oughj@9.208-241-81.adsl-dyn.isp.belgacom.be) has quit (Max SendQ exceeded)
+2016-03-31 06:51:54	-->	dspok (~dspok@AAubervilliers-151-1-17-160.w83-114.abo.wanadoo.fr) has joined #ardupilot
+2016-03-31 06:52:03	<--	dspok (~dspok@AAubervilliers-151-1-17-160.w83-114.abo.wanadoo.fr) has quit (Remote host closed the connection)
+2016-03-31 06:57:48	-->	Gomi (~Gomi@9.208-241-81.adsl-dyn.isp.belgacom.be) has joined #ardupilot
+2016-03-31 06:58:11	<--	Gomi (~Gomi@9.208-241-81.adsl-dyn.isp.belgacom.be) has quit (Max SendQ exceeded)
+2016-03-31 06:59:12	-->	ektt (~ektt@AStrasbourg-653-1-98-120.w90-13.abo.wanadoo.fr) has joined #ardupilot
+2016-03-31 06:59:34	<--	ektt (~ektt@AStrasbourg-653-1-98-120.w90-13.abo.wanadoo.fr) has quit (Max SendQ exceeded)
+2016-03-31 07:01:42	-->	Bsu (~Bsu@AStrasbourg-653-1-98-120.w90-13.abo.wanadoo.fr) has joined #ardupilot
+2016-03-31 07:01:59	<--	Bsu (~Bsu@AStrasbourg-653-1-98-120.w90-13.abo.wanadoo.fr) has quit (Max SendQ exceeded)
+2016-03-31 07:12:40	-->	gijq (~gijq@cac94-8-82-245-27-76.fbx.proxad.net) has joined #ardupilot
+2016-03-31 07:12:57	<--	gijq (~gijq@cac94-8-82-245-27-76.fbx.proxad.net) has quit (Max SendQ exceeded)
+2016-03-31 07:40:49	-->	Iaxc (~Iaxc@cac94-8-82-245-27-76.fbx.proxad.net) has joined #ardupilot
+2016-03-31 07:41:04	<--	Iaxc (~Iaxc@cac94-8-82-245-27-76.fbx.proxad.net) has quit (Max SendQ exceeded)
+2016-03-31 07:42:32	-->	xcsab (~xcsab@cac94-8-82-245-27-76.fbx.proxad.net) has joined #ardupilot
+2016-03-31 07:44:38	<--	xcsab (~xcsab@cac94-8-82-245-27-76.fbx.proxad.net) has quit (Max SendQ exceeded)
+2016-03-31 09:06:33	-->	iozsx (~iozsx@ARennes-656-1-383-185.w90-32.abo.wanadoo.fr) has joined #ardupilot
+2016-03-31 09:06:50	<--	iozsx (~iozsx@ARennes-656-1-383-185.w90-32.abo.wanadoo.fr) has quit (Max SendQ exceeded)
+2016-03-31 09:09:54	-->	Wkre (~Wkre@ARennes-656-1-383-185.w90-32.abo.wanadoo.fr) has joined #ardupilot
+2016-03-31 09:09:59	<--	Wkre (~Wkre@ARennes-656-1-383-185.w90-32.abo.wanadoo.fr) has quit (Max SendQ exceeded)
+2016-03-31 09:21:33	-->	foobarbecue (~quassel@129.138.134.59) has joined #ardupilot
+2016-03-31 09:53:37	-->	_Zig_ (~chatzilla@sqg02-3-78-249-152-11.fbx.proxad.net) has joined #ardupilot
+2016-03-31 10:02:04	<--	Kabouik (~quassel@147.99.219.229) has quit (Ping timeout: 244 seconds)
+2016-03-31 10:06:42	--	irc: disconnected from server
+2016-03-31 10:07:05	-->	pxc1 (~pxc@wsip-68-14-243-77.ph.ph.cox.net) has joined #ardupilot
+2016-03-31 10:07:05	--	Topic for #ardupilot is "Diydrones.com"
+2016-03-31 10:07:05	--	Topic set by zbayne on Tue, 21 Feb 2012 16:21:26
+2016-03-31 10:07:05	--	Channel #ardupilot: 32 nicks (0 ops, 0 voices, 32 normals)
+2016-03-31 10:07:07	--	Channel created on Mon, 07 Feb 2011 10:58:31
+2016-03-31 10:10:40	<--	pxc (~pxc@wsip-68-14-243-77.ph.ph.cox.net) has quit (Ping timeout: 264 seconds)
+2016-03-31 11:14:08	-->	foobarbecue_ (~quassel@129.138.146.14) has joined #ardupilot
+2016-03-31 11:14:33	<--	foobarbecue (~quassel@129.138.134.59) has quit (Ping timeout: 276 seconds)
+2016-03-31 12:49:18	<--	_Zig_ (~chatzilla@sqg02-3-78-249-152-11.fbx.proxad.net) has quit (Quit: ChatZilla 0.9.92 [Firefox 45.0.1/20160315153207])
+2016-03-31 13:23:43	<--	kerwood_wk (~mjj@c-76-21-166-25.hsd1.md.comcast.net) has quit (Quit: WeeChat 0.4.2)
+2016-03-31 15:41:06	<--	foobarbecue_ (~quassel@129.138.146.14) has quit (Quit: No Ping reply in 180 seconds.)
+2016-03-31 15:42:55	-->	foobarbecue (~quassel@129.138.146.14) has joined #ardupilot
+2016-03-31 18:48:54	<--	foobarbecue (~quassel@129.138.146.14) has quit (Ping timeout: 276 seconds)
+2016-03-31 19:52:57	-->	foobarbecue (~quassel@129.138.146.14) has joined #ardupilot
+2016-03-31 20:09:22	--	irc: disconnected from server
+2016-03-31 20:09:48	-->	pxc1 (~pxc@wsip-68-14-243-77.ph.ph.cox.net) has joined #ardupilot
+2016-03-31 20:09:48	--	Topic for #ardupilot is "Diydrones.com"
+2016-03-31 20:09:48	--	Topic set by zbayne on Tue, 21 Feb 2012 16:21:26
+2016-03-31 20:09:48	--	Channel #ardupilot: 29 nicks (0 ops, 0 voices, 29 normals)
+2016-03-31 20:09:50	--	Channel created on Mon, 07 Feb 2011 10:58:31
+2016-03-31 20:13:21	--	irc: disconnected from server
+2016-03-31 20:13:44	-->	pxc2 (~pxc@wsip-68-14-243-77.ph.ph.cox.net) has joined #ardupilot
+2016-03-31 20:13:44	--	Topic for #ardupilot is "Diydrones.com"
+2016-03-31 20:13:44	--	Topic set by zbayne on Tue, 21 Feb 2012 16:21:26
+2016-03-31 20:13:44	--	Channel #ardupilot: 30 nicks (0 ops, 0 voices, 30 normals)
+2016-03-31 20:13:47	--	Channel created on Mon, 07 Feb 2011 10:58:31
+2016-03-31 20:16:54	<--	pxc1 (~pxc@wsip-68-14-243-77.ph.ph.cox.net) has quit (Ping timeout: 246 seconds)
+2016-03-31 20:17:22	--	irc: disconnected from server
+2016-03-31 20:17:46	-->	pxc2 (~pxc@wsip-68-14-243-77.ph.ph.cox.net) has joined #ardupilot
+2016-03-31 20:17:46	--	Topic for #ardupilot is "Diydrones.com"
+2016-03-31 20:17:46	--	Topic set by zbayne on Tue, 21 Feb 2012 16:21:26
+2016-03-31 20:17:47	--	Channel #ardupilot: 29 nicks (0 ops, 0 voices, 29 normals)
+2016-03-31 20:17:49	--	Channel created on Mon, 07 Feb 2011 10:58:31
+2016-03-31 20:20:27	--	irc: disconnected from server
+2016-03-31 20:20:50	-->	pxc2 (~pxc@wsip-68-14-243-77.ph.ph.cox.net) has joined #ardupilot
+2016-03-31 20:20:50	--	Topic for #ardupilot is "Diydrones.com"
+2016-03-31 20:20:50	--	Topic set by zbayne on Tue, 21 Feb 2012 16:21:26
+2016-03-31 20:20:50	--	Channel #ardupilot: 29 nicks (0 ops, 0 voices, 29 normals)
+2016-03-31 20:20:52	--	Channel created on Mon, 07 Feb 2011 10:58:31
+2016-03-31 20:23:51	--	irc: disconnected from server
+2016-03-31 20:24:16	-->	pxc2 (~pxc@wsip-68-14-243-77.ph.ph.cox.net) has joined #ardupilot
+2016-03-31 20:24:16	--	Topic for #ardupilot is "Diydrones.com"
+2016-03-31 20:24:16	--	Topic set by zbayne on Tue, 21 Feb 2012 16:21:26
+2016-03-31 20:24:16	--	Channel #ardupilot: 29 nicks (0 ops, 0 voices, 29 normals)
+2016-03-31 20:24:19	--	Channel created on Mon, 07 Feb 2011 10:58:31
+2016-03-31 20:25:13	--	irc: disconnected from server
+2016-03-31 20:25:37	-->	pxc2 (~pxc@wsip-68-14-243-77.ph.ph.cox.net) has joined #ardupilot
+2016-03-31 20:25:37	--	Topic for #ardupilot is "Diydrones.com"
+2016-03-31 20:25:37	--	Topic set by zbayne on Tue, 21 Feb 2012 16:21:26
+2016-03-31 20:25:37	--	Channel #ardupilot: 29 nicks (0 ops, 0 voices, 29 normals)
+2016-03-31 20:25:40	--	Channel created on Mon, 07 Feb 2011 10:58:31
+2016-04-01 00:47:09	-->	Kabouik (~quassel@147.99.219.229) has joined #ardupilot
+2016-04-01 00:58:04	<--	foobarbecue (~quassel@129.138.146.14) has quit (Ping timeout: 240 seconds)
+2016-04-01 01:21:17	-->	dibblego (~dibblego@haskell/developer/dibblego) has joined #ardupilot
+2016-04-01 03:03:34	<--	tridge (~tridge@pdpc/supporter/professional/tridge) has quit (Ping timeout: 240 seconds)
+2016-04-01 03:17:32	-->	tridge (~tridge@pdpc/supporter/professional/tridge) has joined #ardupilot
+2016-04-01 03:30:45	<--	tridge (~tridge@pdpc/supporter/professional/tridge) has quit (Ping timeout: 250 seconds)
+2016-04-01 03:49:51	-->	tridge (~tridge@pdpc/supporter/professional/tridge) has joined #ardupilot
+2016-04-01 04:25:54	-->	Andy-D (~Andy-D@cpc12-orpi3-2-0-cust284.2-3.cable.virginm.net) has joined #ardupilot
+2016-04-01 05:01:01	-->	kerwood_wk (~mjj@c-76-21-166-25.hsd1.md.comcast.net) has joined #ardupilot
+2016-04-01 05:11:47	-->	Ssowd (~Ssowd@AStrasbourg-653-1-98-120.w90-13.abo.wanadoo.fr) has joined #ardupilot
+2016-04-01 05:12:05	<--	Ssowd (~Ssowd@AStrasbourg-653-1-98-120.w90-13.abo.wanadoo.fr) has quit (Max SendQ exceeded)
+2016-04-01 05:12:40	-->	zhia (~zhia@AStrasbourg-653-1-98-120.w90-13.abo.wanadoo.fr) has joined #ardupilot
+2016-04-01 05:13:25	<--	zhia (~zhia@AStrasbourg-653-1-98-120.w90-13.abo.wanadoo.fr) has quit (Max SendQ exceeded)
+2016-04-01 05:14:01	-->	Aet (~Aet@AAubervilliers-151-1-17-160.w83-114.abo.wanadoo.fr) has joined #ardupilot
+2016-04-01 05:15:13	<--	Aet (~Aet@AAubervilliers-151-1-17-160.w83-114.abo.wanadoo.fr) has quit (Max SendQ exceeded)
+2016-04-01 05:16:36	-->	Mqo (~Mqo@AAubervilliers-151-1-17-160.w83-114.abo.wanadoo.fr) has joined #ardupilot
+2016-04-01 05:16:40	<--	Mqo (~Mqo@AAubervilliers-151-1-17-160.w83-114.abo.wanadoo.fr) has quit (Max SendQ exceeded)
+2016-04-01 05:17:33	-->	Ntwg (~Ntwg@9.208-241-81.adsl-dyn.isp.belgacom.be) has joined #ardupilot
+2016-04-01 05:17:52	<--	Ntwg (~Ntwg@9.208-241-81.adsl-dyn.isp.belgacom.be) has quit (Max SendQ exceeded)
+2016-04-01 05:42:24	<--	dirkhh (~quassel@2001:19d0:2:6:c0ff:ee:0:11) has quit (Read error: Connection reset by peer)
+2016-04-01 05:43:20	-->	dirkhh (~quassel@2001:19d0:2:6:c0ff:ee:0:11) has joined #ardupilot
+2016-04-01 06:44:41	-->	pxh (~pxh@cac94-8-82-245-27-76.fbx.proxad.net) has joined #ardupilot
+2016-04-01 06:44:50	<--	pxh (~pxh@cac94-8-82-245-27-76.fbx.proxad.net) has quit (Max SendQ exceeded)
+2016-04-01 06:45:29	-->	ktuu (~ktuu@cac94-8-82-245-27-76.fbx.proxad.net) has joined #ardupilot
+2016-04-01 06:45:39	<--	ktuu (~ktuu@cac94-8-82-245-27-76.fbx.proxad.net) has quit (Max SendQ exceeded)
+2016-04-01 07:47:07	-->	_Zig_ (~chatzilla@AAmiens-652-1-35-60.w86-192.abo.wanadoo.fr) has joined #ardupilot
+2016-04-01 08:31:50	-->	foobarbecue (~quassel@129.138.146.14) has joined #ardupilot
+2016-04-01 09:10:05	-->	NoGodDamnIdea (~King@unaffiliated/nogoddamnidea) has joined #ardupilot
+2016-04-01 09:50:56	-->	kfkp (~kfkp@ARennes-656-1-383-185.w90-32.abo.wanadoo.fr) has joined #ardupilot
+2016-04-01 09:52:08	<--	kfkp (~kfkp@ARennes-656-1-383-185.w90-32.abo.wanadoo.fr) has quit (Max SendQ exceeded)
+2016-04-01 09:53:07	-->	wqye (~wqye@ARennes-656-1-383-185.w90-32.abo.wanadoo.fr) has joined #ardupilot
+2016-04-01 09:53:21	<--	wqye (~wqye@ARennes-656-1-383-185.w90-32.abo.wanadoo.fr) has quit (Max SendQ exceeded)
+2016-04-01 10:06:39	<--	NoGodDamnIdea (~King@unaffiliated/nogoddamnidea) has quit (Ping timeout: 268 seconds)
+2016-04-01 10:16:30	-->	NoGodDamnIdea (~King@unaffiliated/nogoddamnidea) has joined #ardupilot
+2016-04-01 10:57:40	-->	Devil (~King@93.118.220.11) has joined #ardupilot
+2016-04-01 10:58:05	--	Devil is now known as Guest35421
+2016-04-01 10:59:04	<--	NoGodDamnIdea (~King@unaffiliated/nogoddamnidea) has quit (Ping timeout: 268 seconds)
+2016-04-01 11:04:38	<--	Guest35421 (~King@93.118.220.11) has quit (Quit: Leaving)
+2016-04-01 11:06:03	-->	NoGodDamnIdea (~King@93.118.220.11) has joined #ardupilot
+2016-04-01 11:06:03	<--	NoGodDamnIdea (~King@93.118.220.11) has quit (Changing host)
+2016-04-01 11:06:03	-->	NoGodDamnIdea (~King@unaffiliated/nogoddamnidea) has joined #ardupilot
+2016-04-01 11:15:24	<--	Kabouik (~quassel@147.99.219.229) has quit (Remote host closed the connection)
+2016-04-01 11:24:59	-->	nebukad (~n@x4db32647.dyn.telefonica.de) has joined #ardupilot
+2016-04-01 12:09:34	<--	nebukad (~n@x4db32647.dyn.telefonica.de) has quit (Read error: Connection reset by peer)
+2016-04-01 12:29:36	<--	kerwood_wk (~mjj@c-76-21-166-25.hsd1.md.comcast.net) has quit (Quit: WeeChat 0.4.2)
+2016-04-01 14:08:07	<--	foobarbecue (~quassel@129.138.146.14) has quit (Ping timeout: 260 seconds)
+2016-04-01 14:14:15	<--	_Zig_ (~chatzilla@AAmiens-652-1-35-60.w86-192.abo.wanadoo.fr) has quit (Quit: ChatZilla 0.9.92 [Firefox 45.0.1/20160315153207])
+2016-04-01 14:35:58	<--	tridge (~tridge@pdpc/supporter/professional/tridge) has quit (Ping timeout: 248 seconds)
+2016-04-01 14:37:21	<--	NoGodDamnIdea (~King@unaffiliated/nogoddamnidea) has quit (Quit: Leaving)
+2016-04-01 15:21:53	-->	tridge (~tridge@pdpc/supporter/professional/tridge) has joined #ardupilot
+2016-04-01 15:21:59	<--	tridge (~tridge@pdpc/supporter/professional/tridge) has quit (Client Quit)
+2016-04-01 15:48:26	-->	foobarbecue (~quassel@129.138.136.58) has joined #ardupilot
+2016-04-01 17:19:49	<--	foobarbecue (~quassel@129.138.136.58) has quit (Ping timeout: 260 seconds)
+2016-04-01 19:41:08	-->	foobarbecue (~quassel@129.138.136.58) has joined #ardupilot
+2016-04-01 21:08:52	<--	foobarbecue (~quassel@129.138.136.58) has quit (Ping timeout: 264 seconds)
+2016-04-01 21:09:21	-->	foobarbecue (~quassel@129.138.146.14) has joined #ardupilot
+2016-04-01 22:16:51	<--	foobarbecue (~quassel@129.138.146.14) has quit (Ping timeout: 248 seconds)
+2016-04-01 22:40:01	-->	foobarbecue (~quassel@67-0-57-247.albq.qwest.net) has joined #ardupilot
+2016-04-01 23:18:12	<--	freen1 (freen1@173-171-228-38.res.bhn.net) has quit
+2016-04-01 23:38:27	<--	foobarbecue (~quassel@67-0-57-247.albq.qwest.net) has quit (Ping timeout: 250 seconds)
+2016-04-02 01:55:51	-->	_Zig_ (~chatzilla@AAmiens-652-1-35-60.w86-192.abo.wanadoo.fr) has joined #ardupilot
+2016-04-02 04:08:07	-->	NoGodDamnIdea (~King@unaffiliated/nogoddamnidea) has joined #ardupilot
+2016-04-02 06:27:28	-->	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has joined #ardupilot
+2016-04-02 06:32:36	<--	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has quit (Ping timeout: 276 seconds)
+2016-04-02 06:49:42	-->	aez (~aez@9.208-241-81.adsl-dyn.isp.belgacom.be) has joined #ardupilot
+2016-04-02 06:50:50	<--	aez (~aez@9.208-241-81.adsl-dyn.isp.belgacom.be) has quit (Max SendQ exceeded)
+2016-04-02 06:52:22	-->	ifzak (~ifzak@cac94-8-82-245-27-76.fbx.proxad.net) has joined #ardupilot
+2016-04-02 06:52:47	<--	ifzak (~ifzak@cac94-8-82-245-27-76.fbx.proxad.net) has quit (Max SendQ exceeded)
+2016-04-02 06:53:39	-->	Uhi (~Uhi@cac94-8-82-245-27-76.fbx.proxad.net) has joined #ardupilot
+2016-04-02 06:53:57	<--	Uhi (~Uhi@cac94-8-82-245-27-76.fbx.proxad.net) has quit (Max SendQ exceeded)
+2016-04-02 06:56:49	-->	Lxel (~Lxel@9.208-241-81.adsl-dyn.isp.belgacom.be) has joined #ardupilot
+2016-04-02 06:57:18	<--	Lxel (~Lxel@9.208-241-81.adsl-dyn.isp.belgacom.be) has quit (Max SendQ exceeded)
+2016-04-02 07:02:30	-->	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has joined #ardupilot
+2016-04-02 07:19:24	<--	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has quit (Ping timeout: 276 seconds)
+2016-04-02 08:40:33	-->	ubq (~ubq@ARennes-656-1-383-185.w90-32.abo.wanadoo.fr) has joined #ardupilot
+2016-04-02 08:41:11	<--	ubq (~ubq@ARennes-656-1-383-185.w90-32.abo.wanadoo.fr) has quit (Remote host closed the connection)
+2016-04-02 08:42:53	-->	uosfe (~uosfe@ARennes-656-1-383-185.w90-32.abo.wanadoo.fr) has joined #ardupilot
+2016-04-02 08:43:14	<--	uosfe (~uosfe@ARennes-656-1-383-185.w90-32.abo.wanadoo.fr) has quit (Max SendQ exceeded)
+2016-04-02 08:59:15	-->	Bvph (~Bvph@AStrasbourg-653-1-98-120.w90-13.abo.wanadoo.fr) has joined #ardupilot
+2016-04-02 08:59:21	<--	Bvph (~Bvph@AStrasbourg-653-1-98-120.w90-13.abo.wanadoo.fr) has quit (Max SendQ exceeded)
+2016-04-02 09:00:12	-->	Naoc (~Naoc@AStrasbourg-653-1-98-120.w90-13.abo.wanadoo.fr) has joined #ardupilot
+2016-04-02 09:00:19	<--	Naoc (~Naoc@AStrasbourg-653-1-98-120.w90-13.abo.wanadoo.fr) has quit (Max SendQ exceeded)
+2016-04-02 12:44:56	_Zig_	iop
+2016-04-02 12:45:02	_Zig_	y a des fr ici ?
+2016-04-02 13:05:44	<--	_Zig_ (~chatzilla@AAmiens-652-1-35-60.w86-192.abo.wanadoo.fr) has left #ardupilot
+2016-04-02 13:46:23	<--	dibblego (~dibblego@haskell/developer/dibblego) has left #ardupilot ("λ")
+2016-04-02 16:11:12	-->	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has joined #ardupilot
+2016-04-02 16:25:04	<--	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has quit (Ping timeout: 240 seconds)
+2016-04-02 17:00:01	<--	NoGodDamnIdea (~King@unaffiliated/nogoddamnidea) has quit (Quit: Leaving)
+2016-04-02 21:47:18	<--	dsal (sid13060@gateway/web/irccloud.com/x-qnserlpyrufgxpyq) has quit (Excess Flood)
+2016-04-02 21:47:43	-->	dsal (sid13060@gateway/web/irccloud.com/x-vglmfifehixyazle) has joined #ardupilot
+2016-04-03 00:45:46	<--	Kamondelious (~kamondeli@108-162-133-179.cable.teksavvy.com) has quit (Ping timeout: 252 seconds)
+2016-04-03 02:26:16	-->	NoGodDamnIdea (~King@unaffiliated/nogoddamnidea) has joined #ardupilot
+2016-04-03 03:00:56	-->	Kamondelious (~kamondeli@108.162.133.179) has joined #ardupilot
+2016-04-03 03:05:00	-->	_Zig_ (~chatzilla@AAmiens-652-1-35-60.w86-192.abo.wanadoo.fr) has joined #ardupilot
+2016-04-03 03:23:01	<--	NoGodDamnIdea (~King@unaffiliated/nogoddamnidea) has quit (Quit: Leaving)
+2016-04-03 04:34:55	-->	vivp (~vivp@cac94-8-82-245-27-76.fbx.proxad.net) has joined #ardupilot
+2016-04-03 04:35:46	<--	vivp (~vivp@cac94-8-82-245-27-76.fbx.proxad.net) has quit (Remote host closed the connection)
+2016-04-03 04:36:46	-->	eqhap (~eqhap@cac94-8-82-245-27-76.fbx.proxad.net) has joined #ardupilot
+2016-04-03 04:37:07	<--	eqhap (~eqhap@cac94-8-82-245-27-76.fbx.proxad.net) has quit (Max SendQ exceeded)
+2016-04-03 04:42:16	<--	_Zig_ (~chatzilla@AAmiens-652-1-35-60.w86-192.abo.wanadoo.fr) has quit (Ping timeout: 252 seconds)
+2016-04-03 04:54:51	<--	Andy-D (~Andy-D@cpc12-orpi3-2-0-cust284.2-3.cable.virginm.net) has quit (Ping timeout: 276 seconds)
+2016-04-03 05:11:48	-->	Andy-D (~Andy-D@cpc12-orpi3-2-0-cust284.2-3.cable.virginm.net) has joined #ardupilot
+2016-04-03 06:09:35	-->	_Zig_ (~chatzilla@AAmiens-652-1-35-60.w86-192.abo.wanadoo.fr) has joined #ardupilot
+2016-04-03 06:47:55	-->	Ejuo (~Ejuo@AAubervilliers-151-1-17-160.w83-114.abo.wanadoo.fr) has joined #ardupilot
+2016-04-03 06:50:26	<--	Ejuo (~Ejuo@AAubervilliers-151-1-17-160.w83-114.abo.wanadoo.fr) has quit (Max SendQ exceeded)
+2016-04-03 06:53:00	-->	yif (~yif@41.250.97.253) has joined #ardupilot
+2016-04-03 06:53:26	<--	yif (~yif@41.250.97.253) has quit (Max SendQ exceeded)
+2016-04-03 06:54:14	-->	Ioei (~Ioei@AAubervilliers-151-1-17-160.w83-114.abo.wanadoo.fr) has joined #ardupilot
+2016-04-03 06:56:11	<--	Ioei (~Ioei@AAubervilliers-151-1-17-160.w83-114.abo.wanadoo.fr) has quit (Max SendQ exceeded)
+2016-04-03 06:57:00	-->	omln (~omln@41.250.97.253) has joined #ardupilot
+2016-04-03 06:58:18	-->	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has joined #ardupilot
+2016-04-03 07:00:10	<--	omln (~omln@41.250.97.253) has quit (Remote host closed the connection)
+2016-04-03 07:05:42	<--	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has quit (Ping timeout: 260 seconds)
+2016-04-03 07:21:34	-->	Ftil (~Ftil@9.208-241-81.adsl-dyn.isp.belgacom.be) has joined #ardupilot
+2016-04-03 07:22:55	<--	Ftil (~Ftil@9.208-241-81.adsl-dyn.isp.belgacom.be) has quit (Remote host closed the connection)
+2016-04-03 07:25:57	-->	Pyikv (~Pyikv@9.208-241-81.adsl-dyn.isp.belgacom.be) has joined #ardupilot
+2016-04-03 07:26:20	<--	Pyikv (~Pyikv@9.208-241-81.adsl-dyn.isp.belgacom.be) has quit (Max SendQ exceeded)
+2016-04-03 08:27:57	-->	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has joined #ardupilot
+2016-04-03 08:34:05	<--	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has quit (Ping timeout: 244 seconds)
+2016-04-03 09:19:24	<--	Andy-D (~Andy-D@cpc12-orpi3-2-0-cust284.2-3.cable.virginm.net) has quit (Ping timeout: 276 seconds)
+2016-04-03 09:26:24	-->	foobarbecue (~quassel@129.138.136.125) has joined #ardupilot
+2016-04-03 09:32:06	-->	Andy-D (~Andy-D@188.29.72.116.threembb.co.uk) has joined #ardupilot
+2016-04-03 10:07:42	<--	foobarbecue (~quassel@129.138.136.125) has quit (Ping timeout: 248 seconds)
+2016-04-03 10:13:18	-->	superware (~superware@bzq-79-177-111-207.red.bezeqint.net) has joined #ardupilot
+2016-04-03 10:14:08	superware	Is there a MAVLink expert here? I've just enhanced MAVLink's common.xml to include all missing field "enum" attributes and added a new "unit" and "scale" where needed. is there a chance to push this into the master branch?
+2016-04-03 10:17:11	-->	Aomdu (~Aomdu@ARennes-656-1-383-185.w90-32.abo.wanadoo.fr) has joined #ardupilot
+2016-04-03 10:18:06	<--	Aomdu (~Aomdu@ARennes-656-1-383-185.w90-32.abo.wanadoo.fr) has quit (Remote host closed the connection)
+2016-04-03 10:18:57	superware	anyone alive? :|
+2016-04-03 10:22:07	-->	sai (~sai@ARennes-656-1-383-185.w90-32.abo.wanadoo.fr) has joined #ardupilot
+2016-04-03 10:23:26	<--	sai (~sai@ARennes-656-1-383-185.w90-32.abo.wanadoo.fr) has quit (Max SendQ exceeded)
+2016-04-03 10:33:51	<--	_Zig_ (~chatzilla@AAmiens-652-1-35-60.w86-192.abo.wanadoo.fr) has quit (Quit: ChatZilla 0.9.92 [Firefox 45.0.1/20160315153207])
+2016-04-03 10:49:44	-->	NoGodDamnIdea (~King@unaffiliated/nogoddamnidea) has joined #ardupilot
+2016-04-03 10:50:04	-->	nebukad (~n@x4db3213f.dyn.telefonica.de) has joined #ardupilot
+2016-04-03 10:55:00	-->	wcur (~wcur@AStrasbourg-653-1-98-120.w90-13.abo.wanadoo.fr) has joined #ardupilot
+2016-04-03 10:55:09	<--	wcur (~wcur@AStrasbourg-653-1-98-120.w90-13.abo.wanadoo.fr) has quit (Max SendQ exceeded)
+2016-04-03 10:55:40	-->	cok (~cok@AStrasbourg-653-1-98-120.w90-13.abo.wanadoo.fr) has joined #ardupilot
+2016-04-03 10:55:41	<--	cok (~cok@AStrasbourg-653-1-98-120.w90-13.abo.wanadoo.fr) has quit (Max SendQ exceeded)
+2016-04-03 11:09:21	<--	Andy-D (~Andy-D@188.29.72.116.threembb.co.uk) has quit (Remote host closed the connection)
+2016-04-03 11:29:04	-->	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has joined #ardupilot
+2016-04-03 12:10:31	<--	superware (~superware@bzq-79-177-111-207.red.bezeqint.net) has quit (Quit: Leaving)
+2016-04-03 12:34:51	<--	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has quit (Ping timeout: 244 seconds)
+2016-04-03 12:47:24	-->	Lva (~Lva@160.177.8.82) has joined #ardupilot
+2016-04-03 12:48:01	<--	Lva (~Lva@160.177.8.82) has quit (Max SendQ exceeded)
+2016-04-03 12:54:42	-->	_Zig_ (~chatzilla@sqg02-3-78-249-152-11.fbx.proxad.net) has joined #ardupilot
+2016-04-03 13:29:18	-->	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has joined #ardupilot
+2016-04-03 13:54:41	<--	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has quit (Ping timeout: 250 seconds)
+2016-04-03 13:56:56	<--	NoGodDamnIdea (~King@unaffiliated/nogoddamnidea) has quit (Read error: Connection reset by peer)
+2016-04-03 14:04:58	<--	_Zig_ (~chatzilla@sqg02-3-78-249-152-11.fbx.proxad.net) has quit (Quit: ChatZilla 0.9.92 [Firefox 45.0.1/20160315153207])
+2016-04-03 14:08:44	-->	foobarbecue (~quassel@129.138.146.14) has joined #ardupilot
+2016-04-03 15:51:39	<--	nebukad (~n@x4db3213f.dyn.telefonica.de) has quit (Quit: Verlassend)
+2016-04-03 18:05:39	<--	foobarbecue (~quassel@129.138.146.14) has quit (Ping timeout: 248 seconds)
+2016-04-03 18:24:52	-->	foobarbecue (~quassel@129.138.146.14) has joined #ardupilot
+2016-04-03 19:55:35	<--	g_Dio_afk (~g_Dio@unaffiliated/g-dio/x-2471043) has quit (Ping timeout: 244 seconds)
+2016-04-03 19:59:40	-->	g_Dio (~g_Dio@unaffiliated/g-dio/x-2471043) has joined #ardupilot
+2016-04-03 20:30:05	-->	arduoman01 (~chatzilla@a9.48.caa1.ip4.static.sl-reverse.com) has joined #ardupilot
+2016-04-03 20:33:24	<--	foobarbecue (~quassel@129.138.146.14) has quit (Ping timeout: 260 seconds)
+2016-04-03 21:27:37	-->	freen1 (freen1@173-171-228-38.res.bhn.net) has joined #ardupilot
+2016-04-03 22:24:29	-->	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has joined #ardupilot
+2016-04-03 22:51:52	<--	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has quit (Ping timeout: 260 seconds)
+2016-04-04 00:22:19	-->	dadaro (~androidde@176.33.107.159) has joined #ardupilot
+2016-04-04 02:19:49	-->	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has joined #ardupilot
+2016-04-04 02:19:59	<--	dadaro (~androidde@176.33.107.159) has quit (Read error: Connection reset by peer)
+2016-04-04 02:36:28	<--	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has quit (Ping timeout: 264 seconds)
+2016-04-04 02:43:00	-->	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has joined #ardupilot
+2016-04-04 02:48:55	<--	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has quit (Ping timeout: 244 seconds)
+2016-04-04 02:52:12	-->	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has joined #ardupilot
+2016-04-04 03:56:37	<--	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has quit (Ping timeout: 244 seconds)
+2016-04-04 03:58:12	-->	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has joined #ardupilot
+2016-04-04 04:22:43	<--	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has quit (Ping timeout: 248 seconds)
+2016-04-04 04:27:58	-->	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has joined #ardupilot
+2016-04-04 04:47:47	<--	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has quit (Ping timeout: 250 seconds)
+2016-04-04 04:53:14	-->	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has joined #ardupilot
+2016-04-04 04:56:46	-->	kerwood_wk (~mjj@c-76-21-166-25.hsd1.md.comcast.net) has joined #ardupilot
+2016-04-04 05:14:45	<--	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has quit (Ping timeout: 276 seconds)
+2016-04-04 05:15:27	-->	Iaui (~Iaui@160.177.8.82) has joined #ardupilot
+2016-04-04 05:16:12	<--	Iaui (~Iaui@160.177.8.82) has quit (Max SendQ exceeded)
+2016-04-04 05:16:54	-->	Xia (~Xia@160.177.8.82) has joined #ardupilot
+2016-04-04 05:16:59	<--	Xia (~Xia@160.177.8.82) has quit (Max SendQ exceeded)
+2016-04-04 05:18:09	-->	numpi (~numpi@96.86-67-87.adsl-dyn.isp.belgacom.be) has joined #ardupilot
+2016-04-04 05:18:49	<--	numpi (~numpi@96.86-67-87.adsl-dyn.isp.belgacom.be) has quit (Max SendQ exceeded)
+2016-04-04 05:19:32	-->	thiz (~thiz@96.86-67-87.adsl-dyn.isp.belgacom.be) has joined #ardupilot
+2016-04-04 05:19:48	<--	thiz (~thiz@96.86-67-87.adsl-dyn.isp.belgacom.be) has quit (Max SendQ exceeded)
+2016-04-04 05:25:16	-->	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has joined #ardupilot
+2016-04-04 05:34:15	<--	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has quit (Ping timeout: 276 seconds)
+2016-04-04 05:56:39	-->	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has joined #ardupilot
+2016-04-04 06:16:09	<--	foobarbecue (~quassel@97-123-214-163.albq.qwest.net) has quit (Ping timeout: 260 seconds)
+2016-04-04 06:27:13	-->	Ooaen (~Ooaen@cac94-8-82-245-27-76.fbx.proxad.net) has joined #ardupilot
+2016-04-04 06:27:21	<--	Ooaen (~Ooaen@cac94-8-82-245-27-76.fbx.proxad.net) has quit (Max SendQ exceeded)
+2016-04-04 06:31:56	-->	foobarbecue (~quassel@129.138.128.122) has joined #ardupilot
+2016-04-04 07:13:45	-->	Adb (~Adb@AAubervilliers-151-1-17-160.w83-114.abo.wanadoo.fr) has joined #ardupilot
+2016-04-04 07:13:53	<--	Adb (~Adb@AAubervilliers-151-1-17-160.w83-114.abo.wanadoo.fr) has quit (Max SendQ exceeded)
+2016-04-04 07:20:28	-->	myoiy (~myoiy@AAubervilliers-151-1-17-160.w83-114.abo.wanadoo.fr) has joined #ardupilot
+2016-04-04 07:24:16	<--	myoiy (~myoiy@AAubervilliers-151-1-17-160.w83-114.abo.wanadoo.fr) has quit (Max SendQ exceeded)
+2016-04-04 08:50:20	-->	NoGodDamnIdea (~King@camin10.ucv.ro) has joined #ardupilot
+2016-04-04 08:50:20	<--	NoGodDamnIdea (~King@camin10.ucv.ro) has quit (Changing host)
+2016-04-04 08:50:20	-->	NoGodDamnIdea (~King@unaffiliated/nogoddamnidea) has joined #ardupilot
+2016-04-04 08:57:27	-->	_Zig_ (~chatzilla@sqg02-3-78-249-152-11.fbx.proxad.net) has joined #ardupilot
+2016-04-04 09:37:03	-->	Andy-D (~Andy-D@188.29.78.192.threembb.co.uk) has joined #ardupilot
+2016-04-04 09:59:10	-->	Tze (~Tze@AAubervilliers-151-1-11-254.w83-114.abo.wanadoo.fr) has joined #ardupilot
+2016-04-04 10:01:42	<--	Tze (~Tze@AAubervilliers-151-1-11-254.w83-114.abo.wanadoo.fr) has quit (Max SendQ exceeded)
+2016-04-04 10:04:48	-->	tcov (~tcov@ARennes-656-1-380-191.w90-32.abo.wanadoo.fr) has joined #ardupilot
+2016-04-04 10:05:40	<--	tcov (~tcov@ARennes-656-1-380-191.w90-32.abo.wanadoo.fr) has quit (Remote host closed the connection)
+2016-04-04 10:08:24	-->	Dlfvb (~Dlfvb@ARennes-656-1-380-191.w90-32.abo.wanadoo.fr) has joined #ardupilot
+2016-04-04 10:09:04	<--	Dlfvb (~Dlfvb@ARennes-656-1-380-191.w90-32.abo.wanadoo.fr) has quit (Remote host closed the connection)
+2016-04-04 10:17:16	<--	foobarbecue (~quassel@129.138.128.122) has quit (Ping timeout: 264 seconds)
+2016-04-04 10:26:41	--	irc: disconnected from server
+2016-04-04 10:56:15	-->	pxc (~pxc@wsip-68-14-243-77.ph.ph.cox.net) has joined #ardupilot
+2016-04-04 10:56:15	--	Topic for #ardupilot is "Diydrones.com"
+2016-04-04 10:56:15	--	Topic set by zbayne on Tue, 21 Feb 2012 16:21:26
+2016-04-04 10:56:15	--	Channel #ardupilot: 31 nicks (0 ops, 0 voices, 31 normals)
+2016-04-04 10:56:20	--	Channel created on Mon, 07 Feb 2011 10:58:31
+2016-04-04 11:04:36	-->	pxc (~pxc@wsip-68-14-243-77.ph.ph.cox.net) has joined #ardupilot
+2016-04-04 11:04:36	--	Topic for #ardupilot is "Diydrones.com"
+2016-04-04 11:04:36	--	Topic set by zbayne on Tue, 21 Feb 2012 16:21:26
+2016-04-04 11:04:36	--	Channel #ardupilot: 31 nicks (0 ops, 0 voices, 31 normals)
+2016-04-04 11:04:40	--	Channel created on Mon, 07 Feb 2011 10:58:31

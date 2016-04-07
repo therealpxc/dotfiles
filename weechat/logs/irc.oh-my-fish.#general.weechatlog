@@ -1,0 +1,143 @@
+2016-03-31 12:36:01	-->	pxc (pxc@irc.tinyspeck.com) has joined #general
+2016-03-31 12:36:01	--	Topic for #general is "A place for OhMyFishians to discuss scripts and plugins"
+2016-03-31 12:36:01	--	Channel #general: 91 nicks (0 ops, 0 voices, 91 normals)
+2016-03-31 12:36:04	--	Channel created on Thu, 31 Mar 2016 12:36:04
+2016-03-31 12:38:58	--	irc: disconnected from server
+2016-03-31 12:38:59	-->	pxc (pxc@irc.tinyspeck.com) has joined #general
+2016-03-31 12:38:59	--	Topic for #general is "A place for OhMyFishians to discuss scripts and plugins"
+2016-03-31 12:38:59	--	Channel #general: 91 nicks (0 ops, 0 voices, 91 normals)
+2016-03-31 12:39:06	--	Channel created on Thu, 31 Mar 2016 12:39:06
+2016-03-31 12:43:09		autosort: Finished sorting buffers.
+2016-03-31 20:09:22	--	irc: disconnected from server
+2016-03-31 20:09:33	-->	pxc (pxc@irc.tinyspeck.com) has joined #general
+2016-03-31 20:09:33	--	Topic for #general is "A place for OhMyFishians to discuss scripts and plugins"
+2016-03-31 20:09:33	--	Channel #general: 91 nicks (0 ops, 0 voices, 91 normals)
+2016-03-31 20:09:41	--	Channel created on Thu, 31 Mar 2016 20:09:41
+2016-03-31 20:13:21	--	irc: disconnected from server
+2016-03-31 20:13:32	-->	pxc (pxc@irc.tinyspeck.com) has joined #general
+2016-03-31 20:13:32	--	Topic for #general is "A place for OhMyFishians to discuss scripts and plugins"
+2016-03-31 20:13:32	--	Channel #general: 91 nicks (0 ops, 0 voices, 91 normals)
+2016-03-31 20:13:40	--	Channel created on Thu, 31 Mar 2016 20:13:40
+2016-03-31 20:17:22	--	irc: disconnected from server
+2016-03-31 20:17:33	-->	pxc (pxc@irc.tinyspeck.com) has joined #general
+2016-03-31 20:17:33	--	Topic for #general is "A place for OhMyFishians to discuss scripts and plugins"
+2016-03-31 20:17:33	--	Channel #general: 91 nicks (0 ops, 0 voices, 91 normals)
+2016-03-31 20:17:41	--	Channel created on Thu, 31 Mar 2016 20:17:41
+2016-03-31 20:20:27	--	irc: disconnected from server
+2016-03-31 20:20:38	-->	pxc (pxc@irc.tinyspeck.com) has joined #general
+2016-03-31 20:20:38	--	Topic for #general is "A place for OhMyFishians to discuss scripts and plugins"
+2016-03-31 20:20:38	--	Channel #general: 91 nicks (0 ops, 0 voices, 91 normals)
+2016-03-31 20:20:46	--	Channel created on Thu, 31 Mar 2016 20:20:46
+2016-03-31 20:23:51	--	irc: disconnected from server
+2016-03-31 20:24:02	-->	pxc (pxc@irc.tinyspeck.com) has joined #general
+2016-03-31 20:24:02	--	Topic for #general is "A place for OhMyFishians to discuss scripts and plugins"
+2016-03-31 20:24:02	--	Channel #general: 91 nicks (0 ops, 0 voices, 91 normals)
+2016-03-31 20:24:10	--	Channel created on Thu, 31 Mar 2016 20:24:10
+2016-03-31 20:25:13	--	irc: disconnected from server
+2016-03-31 20:25:24	-->	pxc (pxc@irc.tinyspeck.com) has joined #general
+2016-03-31 20:25:24	--	Topic for #general is "A place for OhMyFishians to discuss scripts and plugins"
+2016-03-31 20:25:24	--	Channel #general: 91 nicks (0 ops, 0 voices, 91 normals)
+2016-03-31 20:25:32	--	Channel created on Thu, 31 Mar 2016 20:25:32
+2016-04-01 08:24:41	-->	atom (atom@irc.tinyspeck.com) has joined #general
+2016-04-02 11:07:24	laurent.fough	Hello, all...
+2016-04-02 11:07:36	laurent.fough	I’ve. got. a. question.
+2016-04-02 11:08:33	laurent.fough	Are there any HARD rules/restrictions on plugin requirements.? I’ve gone over the contributing & plugin development docs, and haven’t seen anything, so figured I’d ask prior to getting too deep into my plugin.
+2016-04-02 11:08:54	laurent.fough	1) plugin retrieves a preview of a omf-theme in the terminal.
+2016-04-02 11:09:13	laurent.fough	2) plugin is _mostly_ functional on my system
+2016-04-02 11:09:38	laurent.fough	3) plugin does require a node module, with its own requirements.
+2016-04-02 11:26:05	bobthecow	I don't think there are any hard restrictions.
+2016-04-02 11:28:10	bobthecow	Many of the plugins have dependencies. Just add instructions to the readme.
+2016-04-02 11:28:25	laurent.fough	@bobthecow: Thanks for the info.
+2016-04-02 11:28:31	bobthecow	e.g. thefuck, grc, etc.
+2016-04-02 11:28:44	bobthecow	For things that can't be enforced by OMF, current best practice is for the plugin to assert that everything it needs is present inside its `init.fish`, and provide instructions and/or not actually initialize when a dependency is missing.
+2016-04-02 11:29:17	laurent.fough	Figured I’d have to do as much— downloaded the entire plugins repo last night, to take a gander at those that do use external (to the system) tools.
+2016-04-02 11:29:37	laurent.fough	Got it. Logical. and makes sense.
+2016-04-02 11:30:50	bobthecow	Note that you probably shouldn't be installing things for the user. That's outside the scope of OMF and likely asking for trouble :)
+2016-04-02 11:31:09	bobthecow	But telling them what they need to do is totally :+1:
+2016-04-02 11:31:56	bobthecow	What's your plugin going to do?
+2016-04-02 11:32:20	laurent.fough	> 1) plugin retrieves a preview of an omf-theme in the terminal.
+2016-04-02 11:32:56	bobthecow	Oh, gotcha. I missed that the first time.
+2016-04-02 11:33:04	laurent.fough	No worries.
+2016-04-02 11:33:58	laurent.fough	I may have to limit it to only: iTerm (OSX) at the moment, and of most terms on *NIX that support inline images.
+2016-04-02 11:34:53	laurent.fough	It scrapes the `repo://*Themes.md#<theme-name>` page retrieves the specific image tag and uses imgcat or other tool to display
+2016-04-02 11:35:41	bobthecow	There are a handful of early projects that also support fancy stuff. Look into Black Screen as well?
+2016-04-02 11:35:54	bobthecow	https://github.com/shockone/black-screen 
+2016-04-02 11:40:01	laurent.fough	Yeah: actually use black-screen… impressive, but not impressed, it core compatibility with what I need do in a shell (daily) is lacking. I keep checking in, every couple of weeks, building it, then running, then… loudly sighing
+2016-04-02 11:42:50	laurent.fough	There was also TermKit, a while ago… I think it may dead though.
+2016-04-02 11:42:52	laurent.fough	https://github.com/unconed/TermKit 
+2016-04-02 11:47:24	bobthecow	Yeah. TermKit was promising too. It'll take a while for any of these to hit their stride but I keep hoping :)
+2016-04-03 19:09:35	derekstavis	Hey @coderstephen, I have been using `argu` recently and I’m stuck in an issue, I believe
+2016-04-03 19:10:53	derekstavis	can I have the following CLI? `foobar -t 3 -- git status` and capture the `git status` part as a single argument?
+2016-04-03 19:45:47	coderstephen	Hmm... not currently. I can add an option to do so, if you like.
+2016-04-03 19:53:11	derekstavis	I’m not very used to getopts standard, so I expected everything after the `--` to be captured in a single argument
+2016-04-03 19:53:30	derekstavis	I have been writing a new awesome plugin for developers :stuck_out_tongue:
+2016-04-03 19:53:48	derekstavis	(In fact I have been writing it to help myself)
+2016-04-04 10:26:56	--	irc: disconnected from server
+2016-04-04 12:59:57	-->	pxc (pxc@irc.tinyspeck.com) has joined #general
+2016-04-04 12:59:57	--	Topic for #general is "A place for OhMyFishians to discuss scripts and plugins"
+2016-04-04 12:59:57	--	Channel #general: 92 nicks (0 ops, 0 voices, 92 normals)
+2016-04-04 13:00:01	--	Channel created on Mon, 04 Apr 2016 13:00:01
+2016-04-04 13:00:04	pxc	hey guys
+2016-04-04 13:00:33	pxc	what's the easiest way for me to simply append something to my fish prompt without changing my theme?
+2016-04-04 13:01:15	pxc	I want my theme to indicate whether or not the current shell has been launched by nix-shell. It would be cool if it had an indicator like many addons have git indicators
+2016-04-04 13:01:41	pxc	will the best thing ultimately be to fork my theme of choice and add it to their fish_prompt function, then make a PR?
+2016-04-04 13:02:33	derekstavis	You can make a copy of original `fish_prompt` function, override it, and call the original
+2016-04-04 13:03:40	pxc	so make a copy, e.g., fish_shmompt
+2016-04-04 13:03:52	pxc	then have fish_prompt call fish_shmompt before adding my little piece?
+2016-04-04 13:04:03	derekstavis	yes!
+2016-04-04 13:04:17	derekstavis	you can copy functions using `functions -c`
+2016-04-04 13:04:34	pxc	oh, rad!
+2016-04-04 13:04:52	pxc	is there any word on the possibility of identifying/specifying external (non-fish) dependencies for omf plugins yet?
+2016-04-04 13:05:54	derekstavis	We still don't have this ability
+2016-04-04 13:06:06	pxc	ok
+2016-04-04 13:06:34	derekstavis	We have been working on some other features, like versioned releases
+2016-04-04 13:09:25	pxc	I saw a few bits. I'm glad development continued at a respectable pace while you guyts sorted out the takedown
+2016-04-04 13:10:02	pxc	how have you been, Derek?
+2016-04-04 13:16:52	derekstavis	Github have reverted the takedown. Everyone who had his fork took down earned a Github T-Shirt :stuck_out_tongue:
+2016-04-04 13:18:27	derekstavis	They understood there was bad faith in the requests, now I believe we are free from this disgrace
+2016-04-04 13:19:12	derekstavis	I have been great, pxc, very busy with a job transition, part time in one, part time in other
+2016-04-04 13:21:26	derekstavis	How were you in this meantime? Much nixOS fun? :stuck_out_tongue:
+2016-04-04 13:55:35	pxc	yeah! I've been doing a bunch of NixOS stuff
+2016-04-04 13:56:12	pxc	that job transition sounds tricky
+2016-04-04 13:56:16	pxc	are your employers aware of each other?
+2016-04-04 13:56:18	pxc	lol
+2016-04-04 13:59:01	derekstavis	yeah, they are, it was an agreement
+2016-04-04 14:00:09	derekstavis	the new company needed my help ASAP and I the old company needed time to find someone to replace my position
+2016-04-04 14:00:52	derekstavis	so instead of 30 days (which is enforced by the law) I will perform a part-time 60 day
+2016-04-04 14:03:41	pxc	ah, that's pretty cool
+2016-04-04 14:04:21	pxc	right now I'm actually doing Nix stuff, configuring a development and testing environment for work. I dropped by because I'm trying to figure out if it's time to add a nice fancy fish to the dev env
+2016-04-04 17:22:03	-->	ultrabob (ultrabob@irc.tinyspeck.com) has joined #general
+2016-04-04 18:47:35	derekstavis	pxc
+2016-04-05 02:11:42	oranja	Interesting. There's another player in the pool, written entirely in Haskell:
+2016-04-05 02:11:42	oranja	https://github.com/kinoru/chips 
+2016-04-05 02:11:42	oranja	(The pool of fish package managers, of course)
+2016-04-05 04:16:22	derekstavis	haskell?
+2016-04-05 04:16:32	derekstavis	WTF
+2016-04-05 05:52:39	bpinto	cool project :simple_smile:
+2016-04-05 05:52:59	derekstavis	other that I don't understand the code, looks cool
+2016-04-05 06:48:30	oranja	Everyone seems to be picking up steam on the parallel updates recently
+2016-04-05 06:58:53	derekstavis	Yeah, it's a good thing.
+2016-04-05 07:11:13	coderstephen	I saw that earlier and was confused ...
+2016-04-05 07:13:16	derekstavis	I still don't understand how it works
+2016-04-05 07:13:20	nesl247	I’d just stick to OMF or Fundle. Would rather not have my shell’s package manager in another language.
+2016-04-05 07:13:31	derekstavis	And as I've done with Fisherman, I have no interest in running it
+2016-04-05 07:14:35	derekstavis	Also about the benefits,  "adding a single file to config.fish" isn't that much benefit
+2016-04-05 07:14:47	nesl247	Complete opposite benefit in my opinion.
+2016-04-05 07:14:56	nesl247	I prefer to keep as much config for my shell in the one file.
+2016-04-05 07:16:03	derekstavis	Also, I don't understand why framework creators can't see that much of the loading time is because of plugins, not infrastructure
+2016-04-05 07:16:40	derekstavis	Currently OMF startup process is slow, but `better-init` branch solves most issues while keeping (and improving) compatibility
+2016-04-05 07:17:40	nesl247	That chips thing basically works by parsing a yaml file of git urls and executes init.fish in each repo.
+2016-04-05 07:18:03	nesl247	The line in the config.fish file is probably to simply run the chips binary
+2016-04-05 07:18:26	derekstavis	Yeah. And then we continue with the same issue: Plugin's `init.fish`
+2016-04-05 07:19:17	nesl247	Yeah, the whole project makes very little sense to me. Who cares if the plugin manager is 500ms faster or whatever. How often do you actually run it anyways?
+2016-04-05 07:19:49	derekstavis	Whoa, 500ms faster is meaningful to me :stuck_out_tongue:
+2016-04-05 07:19:59	nesl247	Lol, it was a hyperbole
+2016-04-05 07:20:13	derekstavis	Yeah, I see, just kidding
+2016-04-05 07:20:25	nesl247	If OMF was that slow, you guys would have people banging on your door
+2016-04-05 07:20:44	derekstavis	We have a single people banging on our door...
+2016-04-05 07:21:48	nesl247	That halloween song is now popping into my head.. Who can it be now?
+2016-04-05 07:22:25	nesl247	Well, at least halloween in the sense that there was a halloween door knocker that kept singing it that I had growing up
+2016-04-05 07:23:20	derekstavis	Haha, I'm sure he is watching our talk right now (or while he's awake).
+2016-04-05 07:23:42	derekstavis	OMF slowness is not a issue for him, it's a market point
+2016-04-05 07:25:05	nesl247	At least a good thing came of the whole debacle. GitHub is more likely to protect OMF against other would-be asshats.
+2016-04-05 07:25:55	derekstavis	Surely, I expect Github to give more attention to perjurious DMCA requests
