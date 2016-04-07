@@ -18,8 +18,15 @@ Show Status Bar=true
 Show Tab Bar=true
 Startup Session=manual
 
+[KTextEditor::Search]
+Replace History=\\0
+Search History=Author:.*
+
+[Konsole]
+AutoSyncronize=false
+SetEditor=false
+
 [MainWindow]
-State=AAAA/wAAAAD9AAAAAAAAAoAAAAHCAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 
 [filetree]
