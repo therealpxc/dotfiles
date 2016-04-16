@@ -8,3 +8,6 @@
 [submodule "fresh/source/freshshell/fresh"]
 	path = fresh/source/freshshell/fresh
 	url = https://github.com/freshshell/fresh
+[submodule "fresh/source/therealpxc/fresh"]
+	path = fresh/source/therealpxc/fresh
+	url = https://github.com/therealpxc/fresh
