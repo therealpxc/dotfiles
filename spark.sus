@@ -4,6 +4,7 @@ card all {
   spark card unicode
   spark card git
   spark card fish
+	spark card fresh
   spark card fonts
 	spark card nix
 	spark card misc
@@ -43,6 +44,13 @@ card fonts {
     10-powerline-symbols.conf -> .config/fontconfig/conf.d/10-powerline-symbols.conf
 }
 
+card fresh {
+		# dem fresh lines
+		.freshrc
+		.fresh
+		.fresh/source/freshshell/fresh/bin/fresh -> .local/bin/fresh
+}
+
 card nix {
     .nixpkgs
 }
@@ -50,9 +58,6 @@ card nix {
 card misc {
     .byobu/keybindings.tmux
 
-		# dem fresh lines
-		.freshrc
-		.fresh/source/freshshell/fresh
 		.config/gtkrc
 		.config/gtkrc-2.0
 
@@ -82,6 +87,7 @@ card misc {
                 .config/katesyntaxhighlightingrc
                 .config/katerc
                 .config/kateschemarc
-                .config/katemetainfos
                 .config/katepartrc
+
+    .weechat
 }
