@@ -48,7 +48,9 @@ card fresh {
 		# dem fresh lines
 		.freshrc
 		.fresh
-		.fresh/source/freshshell/fresh/bin/fresh -> .local/bin/fresh
+
+		# made redundant by fresh itself; oh well
+		.fresh/source/therealpxc/fresh/bin/fresh -> .local/bin/fresh
 }
 
 card nix {
