@@ -9,9 +9,9 @@ package foreign-env
 package fzf
 package gem
 package getopts
+package git@gitlab.com:therealpxc/pkg-hub.git
 package grc
 package https://github.com/oh-my-fish/plugin-config
-package hub
 package kill-on-port
 package local-config
 package technicolor
