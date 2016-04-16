@@ -2,4 +2,6 @@ config/omf/users/root.fish
 config/omf/hosts/nixos.fish
 config/katemetainfos
 fresh/build
-
+*.weechatlog
+weechat/logs/
+weechat/script/plugins.xml.gz
