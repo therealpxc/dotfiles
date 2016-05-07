@@ -55,6 +55,7 @@ card fresh {
 
 card nix {
     .nixpkgs
+		.config/nixup
 }
 
 card misc {
