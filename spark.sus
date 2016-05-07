@@ -33,7 +33,7 @@ card fish {
     # oh-my-fish
     omf
   }
-  misc-git/oh-my-fish -> .local/share/omf
+  .local/share/omf
 }
 
 card fonts {
