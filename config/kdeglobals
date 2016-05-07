@@ -91,11 +91,13 @@ ForegroundVisited=127,140,141
 [General]
 ColorScheme=Breeze Dark
 Name=Breeze Dark
-XftAntialias=true
-XftHintStyle=hintmedium
-XftSubPixel=none
 dbfile=/home/pxc/.mozilla/firefox/3qnnlmki.default/places.sqlite
+fixed=Monospace,9,-1,5,50,0,0,0,0,0
+font=Sans Serif,10,-1,5,50,0,0,0,0,0
+menuFont=Sans Serif,10,-1,5,50,0,0,0,0,0
 shadeSortColumn=true
+smallestReadableFont=Sans Serif,8,-1,5,50,0,0,0,0,0
+toolBarFont=Sans Serif,9,-1,5,50,0,0,0,0,0
 
 [Icons]
 Theme=breeze-dark
@@ -138,6 +140,7 @@ MaximumRemoteSize=0
 [WM]
 activeBackground=49,54,59
 activeBlend=255,255,255
+activeFont=Sans Serif,10,-1,5,50,0,0,0,0,0
 activeForeground=239,240,241
 inactiveBackground=49,54,59
 inactiveBlend=75,71,67
