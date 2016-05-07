@@ -5,3 +5,4 @@ fresh/build
 *.weechatlog
 weechat/logs/
 weechat/script/plugins.xml.gz
+weechat/weechat.log
