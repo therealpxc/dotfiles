@@ -5,6 +5,8 @@ pkgs :
   virtualbox = { enableExtensionPack = true; };
   gazebo = { withQuickBuild = true; };
 
+  nix.nixPath = [ "nixup-config=/home/pxc/.config/nixup/profile.nix" ];
+
   #packageOverrides = pkgs:
   #rec {
   
