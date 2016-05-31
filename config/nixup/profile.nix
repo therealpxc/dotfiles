@@ -2,11 +2,11 @@
 
 {
 
-  user.packages = with pkgs; [
-    lyx
-  ];
+#  user.packages = with pkgs; [
+#    sift
+#  ];
 
-  imperativeNix.enable = true;
+#  imperativeNix.enable = true;
 
   # This option is a list of configuration files, expressed as attribution sets.
   # The only attributes in the sets are `target` and `text`, which give the location
