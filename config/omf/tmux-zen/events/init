@@ -1,1 +1,1 @@
-sleep 3s; and powerline-config tmux setup &
+powerline-config tmux setup
