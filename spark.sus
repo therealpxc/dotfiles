@@ -13,6 +13,7 @@ card all {
 
 card passwords {
   .password-store
+  .config/IJHack/QtPass.conf
 }
 
 # compose key & other unicode delights
