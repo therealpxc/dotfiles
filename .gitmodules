@@ -10,3 +10,6 @@
 [submodule "local/share/omf"]
 	path = local/share/omf
 	url = git@gitlab.com:therealpxc/oh-my-fish.git
+[submodule "password-store"]
+	path = password-store
+	url = git@gitlab.com:therealpxc/password-store.git
