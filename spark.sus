@@ -4,10 +4,15 @@ card all {
   spark card unicode
   spark card git
   spark card fish
+  spark card passwords
 	spark card fresh
   spark card fonts
 	spark card nix
 	spark card misc
+}
+
+card passwords {
+  .password-store
 }
 
 # compose key & other unicode delights
