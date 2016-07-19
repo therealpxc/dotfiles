@@ -30,6 +30,19 @@ Variable=ff2980b9,fffdbc4b,,,,,-,-,,---
 Verbatim String=ffda4453,ffda4453,,,,,-,-,,---
 Warning=ffda4453,ffda4453,,,,,-,-,,---
 
+[Highlighting JSON - Schema KDE]
+JSON:Style_Decimal=17,,,,,,,,,,---
+JSON:Style_Error=30,,,,,,,,,,---
+JSON:Style_Float=19,,,,,,,,,,---
+JSON:Style_Keyword=1,,,,,,,,,,---
+JSON:Style_Normal=0,,,,,,,,,,---
+JSON:Style_Seperator_Array=29,,,1,,,,,,,---
+JSON:Style_Seperator_Pair=2,,,1,,,,,,,---
+JSON:Style_String_Key=16,,,,,,,,,,---
+JSON:Style_String_Key_Char=10,,,,,,,,,,---
+JSON:Style_String_Value=12,,,,,,,,,,---
+JSON:Style_String_Value_Char=10,,,,,,,,,,---
+
 [Highlighting None - Schema KDE]
 Normal Text=0,,,,,,,,,,---
 
