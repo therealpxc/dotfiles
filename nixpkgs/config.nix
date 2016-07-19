@@ -7,6 +7,16 @@ pkgs :
 
   nix.nixPath = [ "nixup-config=/home/pxc/.config/nixup/profile.nix" ];
 
+  firefox = {
+    enableGoogleTalkPlugin = true;
+    enableAdobeFlash = true;
+  };
+
+  chromium = {
+    enablePepperFlash = true;
+    enablePepperPDF = true;
+  };
+
   #packageOverrides = pkgs:
   #rec {
   
