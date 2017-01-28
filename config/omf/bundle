@@ -1,6 +1,7 @@
 package balias
 package bang-bang
 package basename-compat
+package direnv
 package errno
 package export
 package fasd
