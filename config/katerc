@@ -28,6 +28,12 @@ SetEditor=false
 
 [MainWindow]
 ToolBarsMovable=Disabled
+[Shortcuts]
+kate_mdi_toolview_kate_plugin_katesearch=none
+kate_mdi_toolview_kate_private_plugin_katefiletreeplugin=none
+kate_mdi_toolview_kate_private_plugin_katekonsoleplugin=F4
+kate_mdi_toolview_kateproject=none
+kate_mdi_toolview_kateprojectinfo=none
 
 [filetree]
 editShade=33,84,111
