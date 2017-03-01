@@ -8,4 +8,6 @@ alias j z				# aka jay-z
 #alias ag sift
 alias ls "ls --color=auto"
 alias kquitapp kquitapp5
-
+function powerline-tmux-init --on-event zen.init
+  powerline-config tmux setup
+end
