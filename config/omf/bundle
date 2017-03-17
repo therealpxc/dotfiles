@@ -7,7 +7,6 @@ package export
 package fasd
 package fonts
 package foreign-env
-package fzf
 package gem
 package getopts
 package git@gitlab.com:therealpxc/pkg-hub.git
