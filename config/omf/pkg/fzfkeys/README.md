@@ -18,7 +18,6 @@ $ omf install fzfkeys
 
 
 ## Usage
-This package adds the default fzf keybindings to the user's environment automatically. You can read about the keybindings on the [fzf Github readme](https://github.com/junegunn/fzf#key-bindings-for-command-line).
 
 
 # License
