@@ -39,7 +39,7 @@ function roll
       set -l i 0
       for option in op mod
         set i (math $i + 1)
-        set -l mod_groups (string replace -r $mod_pattern (rearray op mod) $__has_mod)
+        set -l mod_groups (string replace -r $mod_pattern (rearray op mod) -- $__has_mod)
         set $option $mod_groups[$i]
       end;
     end
