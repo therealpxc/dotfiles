@@ -34,6 +34,7 @@ card fish {
     # fish itself
     fish/config.fish
     fish/conf.d
+    fish/functions
 
     # oh-my-fish
     omf
