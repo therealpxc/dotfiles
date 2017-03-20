@@ -1,22 +1,17 @@
 function roll
-  function rollspec
+  function rollspec -a spec
     set -l reps_pattern '(?:(?<reps>\d+)x)'
     set -l count_pattern '(?<count>\d*)'
-    set -l mod_pattern '(?<op>[\-+])(?<mod>\d+)'
+    set -l mod_pattern '(?<op>[\-+*])(?<mod>\d+)'
     set -l arg_pattern (string join '' \
       "(?<__has_reps>(?:$reps_pattern?))" \
       "(?:(?<__has_count>(?:"$count_pattern"))d)?" \
       '(?<sides>\d+)' \
       "(?<__has_mod>(?:$mod_pattern)?)")
+    set -l base_match_names __has_reps __has_count __has_mod sides
 
     ### ↓ begin parsing sole argument ↓ ###
-    set -l base_match_names __has_reps __has_count __has_mod sides
-    set -l base_matches (string replace -r $arg_pattern (rearray $base_match_names) $argv[1])
-    set -l i 0
-    for option in $base_match_names
-      set i (math $i + 1)
-      set $option $base_matches[$i]
-    end;  set -lu i
+    eval (gather_regex_matches $arg_pattern $spec $base_match_names)
     
     set -l reps 1
     if test -n $__has_reps
@@ -28,9 +23,12 @@ function roll
       set count (string replace -r $count_pattern '${count}' $__has_count)
     end
 
-    set -l mod 0
+
     set -l op +
+    set -l mod 0
     if test -n $__has_mod
+      eval (gather_regex_matches $mod_pattern "$__has_mod" op mod)
+
       set -l i 0
       for option in op mod
         set i (math $i + 1)
@@ -41,7 +39,7 @@ function roll
     ### ↑ end parsing argument ↑ ###
 
     set -l rolls
-    echo rolling $argv[1]:
+    echo rolling $spec:
     for rep in (seq 1 $reps)
       for roll in (seq 1 $count)
         set rolls[$roll] (random 1 $sides)
@@ -62,7 +60,7 @@ function roll
       if test -n $__has_mod
         echo -n [$op$mod] ''
       end
-      # why doesn't this conditional work right
+      
       if test -n $__has_mod -o $count -ne 1
         echo = (math '(' $rolls_sum_str ')' $op $mod)
       else
