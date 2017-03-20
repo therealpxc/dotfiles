@@ -1,9 +1,4 @@
 function roll
-	# Creates a fish regex replacement string using the supplied arguments as matching group names'
-	function rearray
-     string join '\n' (string replace -r '.*' '\\\\$\\{$0\\}' $argv)
-  end
-
   function rollspec
     set -l reps_pattern '(?:(?<reps>\d+)x)'
     set -l count_pattern '(?<count>\d*)'
