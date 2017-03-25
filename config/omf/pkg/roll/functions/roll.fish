@@ -17,12 +17,11 @@ function roll
       # the third argument and all arguments after 
       set -l selected $argv[(seq 3 (count $argv))]
       set -l matches (string replace -r "$pattern" (rearray $selected) -- "$str")
-
-      set -l i 0
-      for name in $selected
+      
+      begin; set -l i 0; for name in $selected
         set i (math $i + 1)
         echo set $name $matches[$i]';'
-      end;  set -lu i
+      end; end
     end
 
 
@@ -40,21 +39,18 @@ function roll
     eval (save_regex_matches "$arg_pattern" "$spec" $base_match_names)
     
     set -l reps 1
-    if test -n "$__has_reps"
-      eval (save_regex_matches $reps_pattern $__has_reps reps)
-    end
+    test -n "$__has_reps"
+      and eval (save_regex_matches $reps_pattern $__has_reps reps)
 
     set -l count 1
-    if test -n "$__has_count"
-      eval (save_regex_matches $count_pattern $__has_count count)
-    end
+    test -n "$__has_count"
+      and eval (save_regex_matches $count_pattern $__has_count count)
 
 
     set -l op +
     set -l mod 0
-    if test -n "$__has_mod"
-      eval (save_regex_matches $mod_pattern $__has_mod op mod)
-    end
+    test -n "$__has_mod"
+      and eval (save_regex_matches $mod_pattern $__has_mod op mod)
     ### ↑ end parsing argument ↑ ###
 
     set -l rolls
@@ -68,23 +64,20 @@ function roll
       set rolls_sum_str (string join ' + ' $rolls)
       
       echo -n -e '\t'
-      if test -n "$__has_mod"; and test $count -ne 1
-        echo -n '('
-      end
-      echo -n $rolls_sum_str
-      if test -n "$__has_mod"; and test $count -ne 1
-        echo -n ')'
-      end
-      echo -n ' '
-      if test -n "$__has_mod"
-        echo -n [$op$mod] ''
-      end
+      test -n "$__has_mod"; and test $count -ne 1
+        and echo -n '('
       
-      if test -n "$__has_mod" -o "$count" -ne 1
-        echo = (math '(' $rolls_sum_str ')' $op $mod)
-      else
-        echo
-      end
+      echo -n $rolls_sum_str
+      test -n "$__has_mod"; and test $count -ne 1
+        and echo -n ')'
+
+      echo -n ' '
+      test -n "$__has_mod"
+        and echo -n [$op$mod] ''
+      
+      test -n "$__has_mod" -o "$count" -ne 1
+        and echo = (math '(' $rolls_sum_str ')' $op $mod)
+        or echo
     end
   end
 
