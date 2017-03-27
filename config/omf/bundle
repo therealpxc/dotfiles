@@ -1,7 +1,6 @@
 package balias
 package bang-bang
 package basename-compat
-package direnv
 package errno
 package export
 package fonts
@@ -11,7 +10,6 @@ package getopts
 package git@gitlab.com:therealpxc/pkg-hub.git
 package grc
 package https://github.com/oh-my-fish/plugin-config
-package https://github.com/therealpxc/pkg-keychain.git
 package https://github.com/therealpxc/plugin-fasd
 package kill-on-port
 package local-config
