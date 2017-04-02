@@ -60,7 +60,7 @@ card fresh {
 }
 
 card nix {
-    .nixpkgs
+    .config/nixpkgs
 		.config/nixup
 }
 
