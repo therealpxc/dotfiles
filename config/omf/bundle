@@ -1,8 +1,6 @@
-package balias
 package bang-bang
 package basename-compat
 package errno
-package export
 package fonts
 package foreign-env
 package gem
