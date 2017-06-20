@@ -7,7 +7,6 @@
       nix-repl
       # needed for some of my configurations, which use
       # /run/current-system/sw/bin/bash
-      bash
       powerline-fonts
   ];
 
@@ -19,6 +18,7 @@
   programs.fish.enable = true;
   programs.man.enable = true;
   programs.info.enable = true;
+  programs.vim.enable = true;
 
   # Recreate /run/current-system symlink after boot.
   services.activate-system.enable = true;
