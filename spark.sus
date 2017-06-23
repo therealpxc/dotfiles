@@ -9,24 +9,35 @@ card all {
   spark card fonts
 	spark card nix
 	spark card misc
+  spark card emacs
+}
+
+card emacs {
+  into ~
+  .emacs.d
+  .spacemacs
 }
 
 card passwords {
+  into ~
   .password-store
   .config/IJHack/QtPass.conf
 }
 
 # compose key & other unicode delights
 card unicode {
+  into ~
   .XCompose
 }
 
 # git stuff!
 card git {
+  into ~
   .gitconfig
 }
 
 card fish {
+  into ~
   {
     into .config
     outof config
@@ -43,6 +54,7 @@ card fish {
 }
 
 card fonts {
+    into ~
     # powerline stuff
     outof misc-git/powerline/font
 
@@ -51,52 +63,55 @@ card fonts {
 }
 
 card fresh {
-		# dem fresh lines
-		.freshrc
-		.fresh
+  into ~
+  # dem fresh lines
+  .freshrc
+  .fresh
 
-		# made redundant by fresh itself; oh well
-		.fresh/source/therealpxc/fresh/bin/fresh -> .local/bin/fresh
+  # made redundant by fresh itself; oh well
+  .fresh/source/therealpxc/fresh/bin/fresh -> .local/bin/fresh
 }
 
 card nix {
-    .config/nixpkgs
-		.config/nixup
+  into ~
+  .config/nixpkgs
+  .config/nixup
 }
 
 card misc {
-    .byobu/keybindings.tmux
+  into ~
+  .byobu/keybindings.tmux
 
-		.config/gtkrc
-		.config/gtkrc-2.0
+  .config/gtkrc
+  .config/gtkrc-2.0
 
-		# kde4 globals
-		.kde/share/config/kdeglobals
-		# kde5 globals
-		.config/kdeglobals
+  # kde4 globals
+  .kde/share/config/kdeglobals
+  # kde5 globals
+  .config/kdeglobals
 
-    # map capslock to compose in KDE
-		.config/kxkbrc
-		
-		.tmux.conf
-		.tmux.conf -> .byobu/.tmux.conf
+  # map capslock to compose in KDE
+  .config/kxkbrc
+  
+  .tmux.conf
+  .tmux.conf -> .byobu/.tmux.conf
 
-		.kde/share/apps/konsole/Naked.profile
-		".kde/share/apps/konsole/Transparent Linux Colors.colorscheme"
-		.kde/share/config/yakuakerc
-		.local/share/konsole/Bash.profile
-		.local/share/konsole/Naked.profile
-		".local/share/konsole/Transparent Linux Colors.colorscheme"
-		.config/konsolerc
-		.config/quassel-irc.org/settings.qss
+  .kde/share/apps/konsole/Naked.profile
+  ".kde/share/apps/konsole/Transparent Linux Colors.colorscheme"
+  .kde/share/config/yakuakerc
+  .local/share/konsole/Bash.profile
+  .local/share/konsole/Naked.profile
+  ".local/share/konsole/Transparent Linux Colors.colorscheme"
+  .config/konsolerc
+  .config/quassel-irc.org/settings.qss
 
-		.config/khotkeysrc
-		
-		.config/katevirc
-                .config/katesyntaxhighlightingrc
-                .config/katerc
-                .config/kateschemarc
-                .config/katepartrc
+  .config/khotkeysrc
+  
+  .config/katevirc
+              .config/katesyntaxhighlightingrc
+              .config/katerc
+              .config/kateschemarc
+              .config/katepartrc
 
-    .weechat
+  .weechat
 }
