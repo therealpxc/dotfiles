@@ -13,3 +13,6 @@
 [submodule "password-store"]
 	path = password-store
 	url = git@gitlab.com:therealpxc/password-store.git
+[submodule "emacs.d"]
+	path = emacs.d
+	url = https://github.com/syl20bnr/spacemacs

@@ -2,8 +2,9 @@
 DisplayNames=
 LayoutList=
 LayoutLoopCount=-1
-Options=terminate:ctrl_alt_bksp,compose:caps
-ResetOldOptions=true
+Model=pc101
+Options[$d]
+ResetOldOptions=false
 ShowFlag=false
 ShowLabel=true
 ShowLayoutIndicator=true
