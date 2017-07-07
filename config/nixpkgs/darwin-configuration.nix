@@ -1,6 +1,11 @@
 { config, lib, pkgs, ... }:
 {
 
+  nix.nixPath = [
+    # marks Nix parent directory
+    "nixpkgs=/etc/nix-darwin/nixpkgs"
+  ];
+
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
@@ -8,6 +13,7 @@
       # needed for some of my configurations, which use
       # /run/current-system/sw/bin/bash
       powerline-fonts
+      bash
   ];
 
   # Create /etc/bashrc that loads the nix-darwin environment.
