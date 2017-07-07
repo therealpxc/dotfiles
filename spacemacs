@@ -398,18 +398,35 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
   ;; (linum-relative-global-mode)
   (linum-relative-toggle)
+
+  ;; global settings
   (setq dotspacemacs-mode-line-unicode-symbols nil)
+
+  ;; buffer-local settings -- defaults
+  (setq-default
+
+   ;; general indentation rules for me
+   tab-width 2
+   indent-tabs-mode nil
+   c-basic-offset 2)
+
   ;; Enable mouse support
   (unless window-system
     (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
     (global-set-key (kbd "<mouse-5>") 'scroll-up-line))
 
+
+  ;; php indentation rules for work
   (setq php-mode-force-pear t)
   (add-hook 'php-mode-hook
 			'(lambda ()
 			   (setq indent-tabs-mode t)
 			   (setq tab-width 4)
 			   (setq c-basic-offset 4)))
+
+  ;; enable rainbow mode by default
+  (add-hook 'prog-mode-hook 'rainbow-mode)
+
   ;; (slack-register-team
   ;;  :name "sigfig"
   ;;  :default t
