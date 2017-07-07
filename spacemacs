@@ -75,6 +75,7 @@ This function should only modify configuration layer settings."
 
      games
      selectric
+     html  ;; web-mode and html highlighting
 
      )
    ;; List of additional packages that will be installed without being
