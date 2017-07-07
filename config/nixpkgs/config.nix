@@ -5,7 +5,8 @@ pkgs :
   virtualbox = { enableExtensionPack = true; };
   gazebo = { withQuickBuild = true; };
 
-  nix.nixPath = [ "nixup-config=/home/pxc/.config/nixup/profile.nix" ];
+  #  nix.nixPath = [ "nixup-config=/home/pxc/.config/nixup/profile.nix" ];
+  nix.nixPath = [ "~/Code/Personal" ];
 
   firefox = {
     enableGoogleTalkPlugin = true;
