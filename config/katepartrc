@@ -19,7 +19,7 @@ Overwrite Mode=false
 PageUp/PageDown Moves Cursor=false
 Remove Spaces=0
 ReplaceTabsDyn=true
-Show Spaces=false
+Show Spaces=true
 Show Tabs=true
 Smart Home=true
 Swap Directory=
@@ -64,10 +64,10 @@ Legend=false
 LineNumbers=false
 
 [Renderer]
-Animate Bracket Matching=false
+Animate Bracket Matching=true
 Schema=KDE
-Show Indentation Lines=false
-Show Whole Bracket Expression=false
+Show Indentation Lines=true
+Show Whole Bracket Expression=true
 Word Wrap Marker=true
 
 [View]
@@ -102,7 +102,7 @@ Show Scrollbars=0
 Show Word Count=false
 Smart Copy Cut=false
 Vi Input Mode Steal Keys=false
-Vi Relative Line Numbers=false
+Vi Relative Line Numbers=true
 Word Completion=true
 Word Completion Minimal Word Length=3
 Word Completion Remove Tail=true

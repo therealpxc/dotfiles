@@ -1,14 +1,26 @@
+[CTags]
+GlobalCommand=ctags -R --c++-types=+px --extra=+q --excmd=pattern --exclude=Makefile --exclude=.
+GlobalNumTargets=0
+
 [Desktop Entry]
 DefaultProfile=Naked.profile
 
+[DownloadDialog Settings]
+Height 768=496
+Width 1366=700
+
 [Favorite Profiles]
 Favorites=
+
+[FileDialogSize]
+Height 768=480
+Width 1366=789
 
 [General]
 Config Revision=10
 Days Meta Infos=30
 Last Session=
-Modified Notification=false
+Modified Notification=true
 Recent File List Entry Count=10
 Restore Window Configuration=true
 Save Meta Infos=true
@@ -18,16 +30,26 @@ Show Status Bar=true
 Show Tab Bar=true
 Startup Session=manual
 
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/Code/Personal/nixdev/pkgs/shells/fish/config.nix,file:$HOME/Code/Personal/csc453-hw/11/test/mine/integer-comparison-not+gt.in,file:$HOME/Code/Personal/csc453-hw/10/src/core/Emitter.java,file:///etc/nixos/modules/xcompose/pointless-extended/__header.xcompose,file:///etc/nixos/modules/xcompose/pointless-extended/arrows.xcompose,file:///etc/nixos/modules/xcompose/pointless-extended/emojish.xcompose,file:///etc/nixos/modules/xcompose/pointless-extended/math.xcompose,file:///etc/nixos/modules/xcompose/pointless-extended/typographical.xcompose,file:///etc/nixos/modules/xcompose/pointless-extended/invisible.xcompose,file:///etc/nixos/modules/xcompose/pointless-extended/latin.xcompose,file:///etc/nixos/modules/xcompose/pointless-extended/macron.xcompose,file:///etc/nixos/modules/xcompose/pointless-extended/vertical.xcompose,file:///etc/nixos/modules/xcompose/pointless-extended/dingbats.xcompose,file:$HOME/Code/Personal/csc453-hw/01/src/JSON.java,file:$HOME/Code/Personal/csc453-hw/01/src/Token.java
+Recent URLs[$e]=file:///etc/nixos/modules/xcompose/pointless-extended/,file:///etc/nixos/modules/xcompose/,file:$HOME/Code/Personal/csc453-hw/01/src/,file:///etc/nixos/modules/,file:$HOME/Code/Personal/csc453-hw/10/src/core/,file:$HOME/Code/Personal/csc453-hw/11/test/mine/,file:$HOME/Code/Personal/nixdev/pkgs/shells/fish/
+
 [KTextEditor::Search]
-Replace History=\\0
-Search History=Author:.*
+Replace History=spark card ,card ,, ,__nix_profile_paths,__extra_profiles,  ,\\\\n,serial,emit,gen,__fish_inject_base_paths,rollspec,__save_regex_matches,;,generateDecisionTree,dent,(Util.indent(a,Util.indent(a,REPO,DOCKER_REGISTRY
+Search History=pxc-common,card ,spark card,vimplugins,vim_customiz,One-line,  ,\\\\n,\\\\s+,Disabled for,__extra_profiles,__fish_inject_base_paths,writeTextFile,etc.,alacritty,configuration,etcConfigAppendix,toFiel,toFile,writeFile,\\\\t,IfStmt,\\\\n\\\\n,deepSerial,callSerial,emitAssignm,emitAssign,assignmentOpForLHS,emitASs,emitAssignmentOp,SETINDEX,IndexExpr,hasInt,instruction.op,getvar,GETVAR,comparison,e\\\\.emit,check,__fish_inject_paths,skill,skills,logic,ancient,brackets,arrows,bullets,__rollspec,rearray,gather_regex_matches,ds4drv,;,genswitchcont,genSwitchStatement,adent,(indent(,indent(,linesAt,treatTokens,slurp(,bufferedinput,CONSUL,REGISTRY,dns,DOCKER_REPO,convertmtoe,inputmetric,outputEnglish,output,meters_to_feet,outputenglish,[ \\\\-],\\\\s|\\\\n,\\\\s,Author:.*
 
 [Konsole]
 AutoSyncronize=false
 SetEditor=false
 
 [MainWindow]
+Height 768=592
+MenuBar=Enabled
+State=AAAA/wAAAAD9AAAAAAAABQQAAALIAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
+Width 1366=1190
+Window-Maximized 768x1366=true
+
 [Shortcuts]
 kate_mdi_toolview_kate_plugin_katesearch=none
 kate_mdi_toolview_kate_private_plugin_katefiletreeplugin=none
