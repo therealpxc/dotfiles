@@ -404,6 +404,12 @@ before packages are loaded."
     (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
     (global-set-key (kbd "<mouse-5>") 'scroll-up-line))
 
+  (setq php-mode-force-pear t)
+  (add-hook 'php-mode-hook
+			'(lambda ()
+			   (setq indent-tabs-mode t)
+			   (setq tab-width 4)
+			   (setq c-basic-offset 4)))
   ;; (slack-register-team
   ;;  :name "sigfig"
   ;;  :default t
