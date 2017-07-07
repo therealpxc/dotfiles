@@ -14,6 +14,8 @@ package local-config
 package technicolor
 package tmux-zen
 package vcs
+theme agnoster
 theme bobthefish
 theme default
+theme emoji-powerline
 theme shellder
