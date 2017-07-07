@@ -406,8 +406,8 @@ before packages are loaded."
   (setq-default
 
    ;; general indentation rules for me
-   tab-width 2
    indent-tabs-mode nil
+   tab-width 2
    c-basic-offset 2)
 
   ;; Enable mouse support
@@ -419,10 +419,29 @@ before packages are loaded."
   ;; php indentation rules for work
   (setq php-mode-force-pear t)
   (add-hook 'php-mode-hook
-			'(lambda ()
-			   (setq indent-tabs-mode t)
-			   (setq tab-width 4)
-			   (setq c-basic-offset 4)))
+            '(lambda ()
+               (setq indent-tabs-mode t)
+               (setq tab-width 4)
+               (setq c-basic-offset 4)))
+
+  ;; java indentation rules for work
+  (add-hook 'java-mode-hook
+            '(lambda ()
+               (setq indent-tabs-mode t)
+               (setq tab-width 4)
+               (setq c-basic-offset 4)))
+
+  ;; scala indentation rules for work
+  (add-hook 'scala-mode-hook
+            '(lambda ()
+               (setq tab-width 4)
+               (setq c-basic-offset 4)))
+
+  ;; hocon indentation is the same as the rules I prefer in general, so none is
+  ;; needed here.
+
+  ;; automatically remove trailing whitespace on save as is expected at work
+  (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
   ;; enable rainbow mode by default
   (add-hook 'prog-mode-hook 'rainbow-mode)
