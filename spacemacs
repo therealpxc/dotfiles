@@ -448,6 +448,9 @@ before packages are loaded."
   ;; enable rainbow mode by default
   (add-hook 'prog-mode-hook 'rainbow-mode)
 
+  ;; I only ever hit this by accident
+  (global-unset-key "M-t")
+
   ;; (slack-register-team
   ;;  :name "sigfig"
   ;;  :default t
