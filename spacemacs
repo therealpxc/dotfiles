@@ -452,7 +452,7 @@ before packages are loaded."
   (add-hook 'prog-mode-hook 'rainbow-mode)
 
   ;; I only ever hit this by accident
-  (global-unset-key "M-t")
+  (global-unset-key "\M-t")
 
   ;; (slack-register-team
   ;;  :name "sigfig"
