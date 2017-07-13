@@ -186,12 +186,12 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '(;;"Hack"
+   dotspacemacs-default-font '(
                                "Source Code Pro"
                                :size 13
                                :weight normal
                                :width normal
-                               :powerline-scale 1.3)
+                               :powerline-scale 1.1)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands `M-x' (after pressing on the leader key).
@@ -381,7 +381,7 @@ It should only modify the values of Spacemacs settings."
    ;; Run `spacemacs/prettify-org-buffer' when
    ;; visiting README.org files of Spacemacs.
    ;; (default nil)
-   dotspacemacs-pretty-docs t
+   dotspacemacs-pretty-docs nil
    ))
 
 (defun dotspacemacs/user-init ()
@@ -404,7 +404,8 @@ before packages are loaded."
   (linum-relative-toggle)
 
   ;; global settings
-  (setq dotspacemacs-mode-line-unicode-symbols nil)
+  (setq dotspacemacs-mode-line-unicode-symbols t
+        dotspacemacs-pretty-docs t)
 
   ;; buffer-local settings -- defaults
   (setq-default
