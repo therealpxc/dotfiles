@@ -445,7 +445,8 @@ before packages are loaded."
   (add-hook 'scala-mode-hook
             '(lambda ()
                (setq tab-width 4)
-               (setq c-basic-offset 4)))
+               (setq c-basic-offset 4)
+               (setq scala-indent:step 4)))
 
   ;; hocon indentation is the same as the rules I prefer in general, so none is
   ;; needed here.
