@@ -70,18 +70,27 @@ This function should only modify configuration layer settings."
      fasd
      docker
 
-     (colors :variables
-             colors-enable-nyan-cat-progress-bar t)
+     colors
+     ;; (colors :variables
+     ;;         colors-enable-nyan-cat-progress-bar nil)
 
      games
      selectric
+     html  ;; web-mode and html highlighting
+
+     org
+
+     xkcd
+
+     ;; I think something will have to be added for Google authentication for this :-()
+     ;; confluence ;; Atlassian wiki
 
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(ag)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -181,12 +190,12 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '(;;"Hack"
+   dotspacemacs-default-font '(
                                "Source Code Pro"
                                :size 13
                                :weight normal
                                :width normal
-                               :powerline-scale 1.3)
+                               :powerline-scale 1.1)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands `M-x' (after pressing on the leader key).
@@ -397,11 +406,62 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
   ;; (linum-relative-global-mode)
   (linum-relative-toggle)
-  (setq dotspacemacs-mode-line-unicode-symbols nil)
+
+  ;; global settings
+  (setq dotspacemacs-mode-line-unicode-symbols t
+        dotspacemacs-pretty-docs t
+        confluence-url "https://sigfig.atlassian.net/wiki/rpc/xmlrpc")
+
+  ;; buffer-local settings -- defaults
+  (setq-default
+
+   ;; general indentation rules for me
+   indent-tabs-mode nil
+   tab-width 2
+   c-basic-offset 2)
+
   ;; Enable mouse support
   (unless window-system
     (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
     (global-set-key (kbd "<mouse-5>") 'scroll-up-line))
+
+
+  ;; php indentation rules for work
+  (setq php-mode-force-pear t)
+  (add-hook 'php-mode-hook
+            '(lambda ()
+               (setq indent-tabs-mode t)
+               (setq tab-width 4)
+               (setq c-basic-offset 4)))
+
+  ;; java indentation rules for work
+  (add-hook 'java-mode-hook
+            '(lambda ()
+               (setq indent-tabs-mode t)
+               (setq tab-width 4)
+               (setq c-basic-offset 4)))
+
+  ;; scala indentation rules for work
+  (add-hook 'scala-mode-hook
+            '(lambda ()
+               (setq tab-width 4)
+               (setq c-basic-offset 4)
+               (setq scala-indent:step 4)))
+
+  ;; hocon indentation is the same as the rules I prefer in general, so none is
+  ;; needed here.
+
+  ;; automatically remove trailing whitespace on save as is expected at work
+  (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+  ;; enable rainbow mode by default
+  (add-hook 'prog-mode-hook 'rainbow-mode)
+
+  ;; I only ever hit this by accident
+  (global-unset-key "\M-t")
+
+  ;; project search
+  (spacemacs/set-leader-keys "ps" 'helm-projectile-ag)
 
   ;; (slack-register-team
   ;;  :name "sigfig"
@@ -426,12 +486,14 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(ansi-color-faces-vector
    [default bold shadow italic underline bold bold-italic bold])
+ '(ansi-color-names-vector
+   ["#2d3743" "#ff4242" "#74af68" "#dbdb95" "#34cae2" "#008b8b" "#00ede1" "#e1e1e0"])
  '(evil-want-Y-yank-to-eol nil)
- '(fci-rule-color "#37474f" t)
+ '(fci-rule-color "#37474f")
  '(hl-sexp-background-color "#1c1f26")
  '(package-selected-packages
    (quote
-    (typit mmt sudoku selectric-mode pacmacs dash-functional 2048-game rainbow-mode rainbow-identifiers dockerfile-mode docker json-mode tablist docker-tramp json-snatcher json-reformat color-identifiers-mode fasd slack circe oauth2 websocket alert log4e gntp yaml-mode material-theme yapfify xterm-color smeargle shell-pop rvm ruby-tools ruby-test-mode ruby-refactor rubocop rspec-mode robe rbenv rake pyvenv pytest pyenv-mode py-isort pip-requirements phpunit phpcbf php-extras php-auto-yasnippets orgit noflet nix-mode multi-term mmm-mode minitest meghanada markdown-toc markdown-mode magit-gitflow lush-theme live-py-mode insert-shebang hy-mode helm-pydoc helm-nixos-options helm-gitignore helm-company helm-c-yasnippet groovy-mode groovy-imports pcache gradle-mode gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md geben fuzzy flycheck-pos-tip pos-tip flycheck-bashate flycheck fish-mode evil-magit magit magit-popup git-commit with-editor eshell-z eshell-prompt-extras esh-help ensime sbt-mode scala-mode emojify ht emoji-cheat-sheet-plus drupal-mode diff-hl cython-mode company-statistics company-shell company-php ac-php-core xcscope php-mode company-nixos-options nixos-options company-emoji company-emacs-eclim eclim company-anaconda company chruby bundler inf-ruby browse-at-remote auto-yasnippet yasnippet anaconda-mode pythonic ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org symon string-inflection spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el password-generator paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav editorconfig dumb-jump define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line)))
+    (ag confluence xml-rpc xkcd powerline spinner hydra parent-mode window-purpose imenu-list projectile pkg-info epl flx smartparens iedit anzu evil goto-chg undo-tree highlight diminish bind-map bind-key packed f dash s helm avy helm-core async popup org-projectile org-present org-pomodoro org-download org-brain gnuplot evil-org web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode impatient-mode htmlize simple-httpd helm-css-scss haml-mode emmet-mode company-web web-completion-data typit mmt sudoku selectric-mode pacmacs dash-functional 2048-game rainbow-mode rainbow-identifiers dockerfile-mode docker json-mode tablist docker-tramp json-snatcher json-reformat color-identifiers-mode fasd slack circe oauth2 websocket alert log4e gntp yaml-mode material-theme yapfify xterm-color smeargle shell-pop rvm ruby-tools ruby-test-mode ruby-refactor rubocop rspec-mode robe rbenv rake pyvenv pytest pyenv-mode py-isort pip-requirements phpunit phpcbf php-extras php-auto-yasnippets orgit noflet nix-mode multi-term mmm-mode minitest meghanada markdown-toc markdown-mode magit-gitflow lush-theme live-py-mode insert-shebang hy-mode helm-pydoc helm-nixos-options helm-gitignore helm-company helm-c-yasnippet groovy-mode groovy-imports pcache gradle-mode gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md geben fuzzy flycheck-pos-tip pos-tip flycheck-bashate flycheck fish-mode evil-magit magit magit-popup git-commit with-editor eshell-z eshell-prompt-extras esh-help ensime sbt-mode scala-mode emojify ht emoji-cheat-sheet-plus drupal-mode diff-hl cython-mode company-statistics company-shell company-php ac-php-core xcscope php-mode company-nixos-options nixos-options company-emoji company-emacs-eclim eclim company-anaconda company chruby bundler inf-ruby browse-at-remote auto-yasnippet yasnippet anaconda-mode pythonic ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org symon string-inflection spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el password-generator paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav editorconfig dumb-jump define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line)))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
@@ -460,4 +522,4 @@ This function is called at the very end of Spacemacs initialization."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-) 
+)
