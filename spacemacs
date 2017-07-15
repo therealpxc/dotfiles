@@ -70,8 +70,9 @@ This function should only modify configuration layer settings."
      fasd
      docker
 
-     (colors :variables
-             colors-enable-nyan-cat-progress-bar t)
+     colors
+     ;; (colors :variables
+     ;;         colors-enable-nyan-cat-progress-bar nil)
 
      games
      selectric
