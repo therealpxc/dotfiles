@@ -460,6 +460,9 @@ before packages are loaded."
   ;; I only ever hit this by accident
   (global-unset-key "\M-t")
 
+  ;; project search
+  (spacemacs/set-leader-keys "ps" 'helm-projectile-ag)
+
   ;; (slack-register-team
   ;;  :name "sigfig"
   ;;  :default t
