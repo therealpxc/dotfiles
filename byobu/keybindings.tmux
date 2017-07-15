@@ -16,5 +16,5 @@ bind j select-pane -D
 bind k select-pane -U
 bind l select-pane -R
 
-bind / split-window -h
-bind - split-window -v
+bind / display-panes \; split-window -h -c "#{pane_current_path}"
+bind - display-panes \; split-window -v -c "#{pane_current_path}"
