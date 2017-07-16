@@ -4,6 +4,8 @@
   nix.nixPath = [
     # marks Nix parent directory
     "nixpkgs=/etc/nix-darwin/nixpkgs"
+    "darwin=/etc/nix-darwin/darwin"
+    "darwin-config=/etc/nix-darwin/configuration.nix"
   ];
 
   # List packages installed in system profile. To search by name, run:
