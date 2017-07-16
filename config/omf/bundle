@@ -8,6 +8,7 @@ package getopts
 package git@gitlab.com:therealpxc/pkg-hub.git
 package grc
 package https://github.com/bobthecow/plugin-emacs.git
+package https://github.com/jitakirin/pkg-keychain.git
 package https://github.com/oh-my-fish/plugin-config
 package https://github.com/therealpxc/plugin-fasd
 package kill-on-port
