@@ -15,7 +15,7 @@
       # needed for some of my configurations, which use
       # /run/current-system/sw/bin/bash
       powerline-fonts
-      bash
+      bashInteractive
   ];
 
   # Create /etc/bashrc that loads the nix-darwin environment.
