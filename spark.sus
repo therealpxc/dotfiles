@@ -87,6 +87,7 @@ card nix {
   .config/nixpkgs/personal/config.nix -> .config/nixpkgs/config.nix
   .config/nixpkgs/personal/darwin-configuration.nix -> .config/nixpkgs/darwin-configuration.nix
 
+  #.config/nixpkgs/pkgsets/nixpkgs/nixpkgs -> .nix-defexpr/nixpkgs
 }
 
 card misc {
