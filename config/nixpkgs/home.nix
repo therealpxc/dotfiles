@@ -1,1 +1,0 @@
-/etc/nixos/homes/pxc.home.nix

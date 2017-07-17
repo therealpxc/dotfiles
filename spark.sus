@@ -83,7 +83,10 @@ card fresh {
 card nix {
   into ~
   .config/nixpkgs
-  .config/nixup
+  .config/nixpkgs/personal/home.nix -> .config/nixpkgs/home.nix
+  .config/nixpkgs/personal/config.nix -> .config/nixpkgs/config.nix
+  .config/nixpkgs/personal/darwin-configuration.nix -> .config/nixpkgs/darwin-configuration.nix
+
 }
 
 card misc {

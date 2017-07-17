@@ -19,3 +19,6 @@
 [submodule "bash_it"]
 	path = bash_it
 	url = https://github.com/Bash-it/bash-it.git
+[submodule "config/nixpkgs"]
+	path = config/nixpkgs
+	url = git@github.com:therealpxc/pxc.nix.d.git
