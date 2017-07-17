@@ -4,12 +4,20 @@ card all {
   spark card unicode
   spark card git
   spark card fish
+  spark card bash
   spark card passwords
 	spark card fresh
   spark card fonts
 	spark card nix
 	spark card misc
   spark card emacs
+}
+
+card bash {
+  into ~
+  .bash_profile
+  .bashrc
+  .bash_it
 }
 
 card emacs {
