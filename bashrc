@@ -5,14 +5,16 @@ fi
 # load direnv hooks
 eval $(direnv hook bash)
 
-# Initialization for FDK command line tools.Sat Jun 10 18:04:41 2017
-FDK_EXE="/Users/pcallahan/bin/FDK/Tools/osx"
-PATH=${PATH}:"/Users/pcallahan/bin/FDK/Tools/osx"
-export PATH
-export FDK_EXE
+if [ "$(uname)" = Darwin ]; then
+  # Initialization for FDK command line tools.Sat Jun 10 18:04:41 2017
+  FDK_EXE="$HOME/bin/FDK/Tools/osx"
+  PATH=${PATH}:"$HOME/bin/FDK/Tools/osx"
+  export PATH
+  export FDK_EXE
+fi
 
 # Path to the bash it configuration
-export BASH_IT="/Users/pcallahan/.bash_it"
+export BASH_IT="$HOME/.bash_it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
@@ -23,7 +25,7 @@ export BASH_IT_THEME='sexy'
 # export BASH_IT_REMOTE='bash-it'
 
 # Your place for hosting Git repos. I use this for private repos.
-export GIT_HOSTING='git@git.domain.com'
+#export GIT_HOSTING='git@git.domain.com'
 
 # Don't check mail when opening terminal.
 unset MAILCHECK
