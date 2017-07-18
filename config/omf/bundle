@@ -5,6 +5,7 @@ package fonts
 package foreign-env
 package gem
 package getopts
+package git@github.com:therealpxc/tmux-zen.git
 package git@gitlab.com:therealpxc/pkg-hub.git
 package grc
 package https://github.com/bobthecow/plugin-emacs.git
@@ -14,7 +15,6 @@ package https://github.com/therealpxc/plugin-fasd
 package kill-on-port
 package local-config
 package technicolor
-package tmux-zen
 package vcs
 theme agnoster
 theme bobthefish
