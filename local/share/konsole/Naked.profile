@@ -1,7 +1,7 @@
 [Appearance]
 BoldIntense=false
 ColorScheme=Transparent Linux Colors
-Font=Monospace,13,-1,2,50,0,0,0,0,0
+Font=Monospace,10,-1,5,50,0,0,0,0,0
 
 [General]
 Name=Naked
