@@ -5,3 +5,5 @@ fresh/build
 weechat/logs/
 weechat/script/plugins.xml.gz
 weechat/*.log
+tmux/plugins
+!tmux/plugins/tpm

@@ -93,6 +93,9 @@ card nix {
 card misc {
   into ~
   .byobu/keybindings.tmux
+  .tmux.conf
+  .tmux.conf -> .byobu/.tmux.conf
+  .tmux
 
   .config/gtkrc
   .config/gtkrc-2.0
@@ -105,8 +108,6 @@ card misc {
   # map capslock to compose in KDE
   .config/kxkbrc
   
-  .tmux.conf
-  .tmux.conf -> .byobu/.tmux.conf
 
   .kde/share/apps/konsole/Naked.profile
   ".kde/share/apps/konsole/Transparent Linux Colors.colorscheme"
