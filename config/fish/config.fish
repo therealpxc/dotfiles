@@ -8,3 +8,5 @@ if test -e ~/.local/bin
   or set -gx PATH ~/.local/bin $PATH
 end
 
+# does this also need to be here?
+set -gx EDITOR vim
