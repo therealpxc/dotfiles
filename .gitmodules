@@ -22,3 +22,6 @@
 [submodule "config/nixpkgs"]
 	path = config/nixpkgs
 	url = git@github.com:therealpxc/pxc.nix.d.git
+[submodule "tmux/plugins/tpm"]
+	path = tmux/plugins/tpm
+	url = git@github.com:tmux-plugins/tpm.git
