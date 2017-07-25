@@ -5,12 +5,21 @@ card all {
   spark card git
   spark card fish
   spark card bash
+  spark card zsh
   spark card passwords
 	spark card fresh
   spark card fonts
 	spark card nix
 	spark card misc
   spark card emacs
+}
+
+card zsh {
+  into ~
+  .zplug
+  .zshrc
+  .zshenv
+  .zprofile
 }
 
 card bash {
