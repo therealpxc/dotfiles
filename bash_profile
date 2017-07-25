@@ -1,7 +1,7 @@
 
 # source non-login shell init
 if [ -f "${HOME}"/.bashrc ]; then
-	source "${HOME}"bashrc
+	source "${HOME}"/.bashrc
 fi
 
 # load direnv hooks
