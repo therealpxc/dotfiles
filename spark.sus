@@ -32,7 +32,7 @@ card bash {
 card emacs {
   into ~
   .emacs.d
-  .spacemacs
+  .spacemacs.d
 }
 
 card passwords {
@@ -66,6 +66,9 @@ card fish {
 
     # oh-my-fish
     omf
+
+    # chips
+    chips
   }
   .local/share/omf
 }
