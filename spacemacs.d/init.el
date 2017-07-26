@@ -103,7 +103,7 @@ This function should only modify configuration layer settings."
      (sql :variables
           sql-capitalize-keywords t)
 
-     ;; add undohist (my 'own' layer-- thanks razzi!)
+     ;; add undohist (my 'own' layer-- thanks razzius!)
      ;; https://github.com/razzius/.spacemacs.d/blob/9696f99b6d782d01aa03be6a356a181d3aab3946/layers/razziundohist/packages.el
      undohist
 
