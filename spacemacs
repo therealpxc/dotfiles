@@ -483,6 +483,11 @@ before packages are loaded."
   ;; project search
   (spacemacs/set-leader-keys "ps" 'helm-projectile-ag)
 
+  ;; autodetect indentation for open files and configure Spacemacs accordingly
+  (add-hook 'prog-mode-hook #'(lambda ()
+                                (dtrt-indent-mode)
+                                (dtrt-indent-adapt)))
+
   ;; (slack-register-team
   ;;  :name "sigfig"
   ;;  :default t
