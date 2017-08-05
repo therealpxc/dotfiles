@@ -139,4 +139,5 @@ card misc {
               .config/katepartrc
 
   .weechat
+  .vimperatorrc
 }

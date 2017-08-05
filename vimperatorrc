@@ -1,0 +1,12 @@
+colorscheme darkness
+
+highlight CmdLine -append font-size:12pt
+highlight CompDesc -append font-size:12pt
+highlight CompItem -append font-size:12pt
+highlight CompItem[selected] -append font-size:12pt
+highlight CompItem>* -append font-size:12pt
+highlight CompGroup -append font-size:12pt
+highlight CompGroup:not(:first-of-type) -append font-size:12pt
+highlight CompTitle -append font-size:12pt
+highlight CompTitle>* -append font-size:12pt
+highlight CompMsg -append font-size:12pt
