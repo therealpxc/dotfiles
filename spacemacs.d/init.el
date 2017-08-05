@@ -57,7 +57,6 @@ This function should only modify configuration layer settings."
             scala-auto-insert-asterisk-in-comments t
             scala-use-unicode-arrows t)
 
-     ruby
      php
      geben      ;; remote debugging for PHP (had to clone geben layer into ~/.emacs.d/private/geben
      ;; gtags    ;; apparently enhances the PHP layer (requires GNU Global installed)
@@ -68,6 +67,9 @@ This function should only modify configuration layer settings."
      ;;java ;; this uses eclim-- fuck that
      java ;; on the develop branch, this uses meghanada by default
      ;; themes-megapack
+
+     (ruby :variables
+           ruby-enable-enh-ruby-mode t)
 
      yaml
      slack
