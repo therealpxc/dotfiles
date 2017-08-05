@@ -504,6 +504,15 @@ before packages are loaded."
   ;;  :client-secret "9ee8a3c3cfc52f8ed6f2170abd3e09f5"
   ;;  :token "2403906172.209402644966.0c6bbbcd8303afa2340e0eca4a7463aac5cac710058d92c81283fcc5940f9bba"
   ;;  :subscribed-channels '(general ))
+
+  ;; use normal keybindings on Darwin (for GNU Emacs)
+  ;; (osx layer appears broken, or doesn't work with GNU Emacs)
+  (when (eq system-type 'darwin) ;; mac specific settings
+    (setq mac-option-modifier 'alt)
+    (setq mac-command-modifier 'meta)
+    (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
+    )
+
    )
 
 ;; Do not write anything past this comment. This is where Emacs will
