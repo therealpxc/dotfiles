@@ -428,6 +428,17 @@ before packages are loaded."
   ;; (linum-relative-global-mode)
   (linum-relative-toggle)
 
+
+  ;; prettier dividers for terminal emacs
+  ;; (set-face-background 'vertical-border "black")
+  ;; (set-face-foreground 'vertical-border (face-background 'vertical-border))
+  (defun my-change-window-divider ()
+    (let ((display-table (or buffer-display-table standard-display-table)))
+      (set-display-table-slot display-table 5 ?│)
+      (set-window-display-table (selected-window) display-table)))
+
+  (add-hook 'window-configuration-change-hook 'my-change-window-divider)
+
   ;; global settings
   (setq dotspacemacs-mode-line-unicode-symbols t
         dotspacemacs-pretty-docs t
@@ -440,7 +451,12 @@ before packages are loaded."
 
         ;; omg I need caching helm projectile is insanely slow on the develop
         ;; branch without it
-        projectile-enable-caching t)
+        projectile-enable-caching t
+        ;; evil-emacs-state-cursor '("chartreuse3" (bar . 2))
+
+        ;; I do not want to use Escape followed by <x> to effect M-x!
+        evil-esc-delay 0
+        )
 
   ;; buffer-local settings -- defaults
   (setq-default
@@ -536,7 +552,7 @@ This function is called at the very end of Spacemacs initialization."
  '(hl-sexp-background-color "#1c1f26")
  '(package-selected-packages
    (quote
-    (undohist dtrt-indent sqlup-mode sql-indent reveal-in-osx-finder pbcopy osx-trash osx-dictionary launchctl ag confluence xml-rpc xkcd powerline spinner hydra parent-mode window-purpose imenu-list projectile pkg-info epl flx smartparens iedit anzu evil goto-chg undo-tree highlight diminish bind-map bind-key packed f dash s helm avy helm-core async popup org-projectile org-present org-pomodoro org-download org-brain gnuplot evil-org web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode impatient-mode htmlize simple-httpd helm-css-scss haml-mode emmet-mode company-web web-completion-data typit mmt sudoku selectric-mode pacmacs dash-functional 2048-game rainbow-mode rainbow-identifiers dockerfile-mode docker json-mode tablist docker-tramp json-snatcher json-reformat color-identifiers-mode fasd slack circe oauth2 websocket alert log4e gntp yaml-mode material-theme yapfify xterm-color smeargle shell-pop rvm ruby-tools ruby-test-mode ruby-refactor rubocop rspec-mode robe rbenv rake pyvenv pytest pyenv-mode py-isort pip-requirements phpunit phpcbf php-extras php-auto-yasnippets orgit noflet nix-mode multi-term mmm-mode minitest meghanada markdown-toc markdown-mode magit-gitflow lush-theme live-py-mode insert-shebang hy-mode helm-pydoc helm-nixos-options helm-gitignore helm-company helm-c-yasnippet groovy-mode groovy-imports pcache gradle-mode gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md geben fuzzy flycheck-pos-tip pos-tip flycheck-bashate flycheck fish-mode evil-magit magit magit-popup git-commit with-editor eshell-z eshell-prompt-extras esh-help ensime sbt-mode scala-mode emojify ht emoji-cheat-sheet-plus drupal-mode diff-hl cython-mode company-statistics company-shell company-php ac-php-core xcscope php-mode company-nixos-options nixos-options company-emoji company-emacs-eclim eclim company-anaconda company chruby bundler inf-ruby browse-at-remote auto-yasnippet yasnippet anaconda-mode pythonic ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org symon string-inflection spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el password-generator paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav editorconfig dumb-jump define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line)))
+    (dactyl-mode org-category-capture enh-ruby-mode undohist dtrt-indent sqlup-mode sql-indent reveal-in-osx-finder pbcopy osx-trash osx-dictionary launchctl ag confluence xml-rpc xkcd powerline spinner hydra parent-mode window-purpose imenu-list projectile pkg-info epl flx smartparens iedit anzu evil goto-chg undo-tree highlight diminish bind-map bind-key packed f dash s helm avy helm-core async popup org-projectile org-present org-pomodoro org-download org-brain gnuplot evil-org web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode impatient-mode htmlize simple-httpd helm-css-scss haml-mode emmet-mode company-web web-completion-data typit mmt sudoku selectric-mode pacmacs dash-functional 2048-game rainbow-mode rainbow-identifiers dockerfile-mode docker json-mode tablist docker-tramp json-snatcher json-reformat color-identifiers-mode fasd slack circe oauth2 websocket alert log4e gntp yaml-mode material-theme yapfify xterm-color smeargle shell-pop rvm ruby-tools ruby-test-mode ruby-refactor rubocop rspec-mode robe rbenv rake pyvenv pytest pyenv-mode py-isort pip-requirements phpunit phpcbf php-extras php-auto-yasnippets orgit noflet nix-mode multi-term mmm-mode minitest meghanada markdown-toc markdown-mode magit-gitflow lush-theme live-py-mode insert-shebang hy-mode helm-pydoc helm-nixos-options helm-gitignore helm-company helm-c-yasnippet groovy-mode groovy-imports pcache gradle-mode gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md geben fuzzy flycheck-pos-tip pos-tip flycheck-bashate flycheck fish-mode evil-magit magit magit-popup git-commit with-editor eshell-z eshell-prompt-extras esh-help ensime sbt-mode scala-mode emojify ht emoji-cheat-sheet-plus drupal-mode diff-hl cython-mode company-statistics company-shell company-php ac-php-core xcscope php-mode company-nixos-options nixos-options company-emoji company-emacs-eclim eclim company-anaconda company chruby bundler inf-ruby browse-at-remote auto-yasnippet yasnippet anaconda-mode pythonic ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org symon string-inflection spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el password-generator paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav editorconfig dumb-jump define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line)))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
