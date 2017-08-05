@@ -81,6 +81,9 @@ This function should only modify configuration layer settings."
      ;; (colors :variables
      ;;         colors-enable-nyan-cat-progress-bar nil)
 
+     ;; this looks better for terminal emacsclients
+     vim-powerline
+
      games
      selectric
      html  ;; web-mode and html highlighting
@@ -99,6 +102,9 @@ This function should only modify configuration layer settings."
      ;; add undohist (my 'own' layer-- thanks razzius!)
      ;; https://github.com/razzius/.spacemacs.d/blob/9696f99b6d782d01aa03be6a356a181d3aab3946/layers/razziundohist/packages.el
      undohist
+
+     ;; dactyl-mode: vim and vimperrator config highlighting
+     vimscript
 
      )
    ;; List of additional packages that will be installed without being
