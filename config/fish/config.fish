@@ -9,4 +9,5 @@ if test -e ~/.local/bin
 end
 
 # does this also need to be here?
-set -gx EDITOR vim
+# set -gx EDITOR vi
+set -gx EDITOR "emacsclient --create-frame --tty"
