@@ -92,15 +92,6 @@ This function should only modify configuration layer settings."
      ;; I think something will have to be added for Google authentication for this :-()
      ;; confluence ;; Atlassian wiki
 
-     ;; macOS keybinding fixes-- I want the same keys as on other platforms
-     ;; (osx :variables
-     ;;      osx-command-as       'meta
-     ;;      osx-option-as        'hyper
-     ;;      osx-control-as       'control
-     ;;      osx-function-as      'none
-     ;;      osx-right-command-as 'left
-     ;;      osx-right-option-as  'left
-     ;;      osx-right-control-as 'left)
 
      (sql :variables
           sql-capitalize-keywords t)
