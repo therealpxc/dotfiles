@@ -456,8 +456,11 @@ before packages are loaded."
 
         ;; I do not want to use Escape followed by <x> to effect M-x!
         evil-esc-delay 0
-        )
 
+        system-uses-terminfo nil
+        )
+  (custom-set-faces
+   '(term ((t (:inherit default)))))
   ;; buffer-local settings -- defaults
   (setq-default
 
@@ -586,5 +589,5 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(term ((t (:inherit default)))))
 )
