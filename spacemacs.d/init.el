@@ -88,7 +88,9 @@ This function should only modify configuration layer settings."
      selectric
      html  ;; web-mode and html highlighting
 
-     org
+     latex
+     (org :variables
+          org-enable-github-support t)
 
      xkcd
 
@@ -111,7 +113,7 @@ This function should only modify configuration layer settings."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(ag dtrt-indent)
+   dotspacemacs-additional-packages '(ag dtrt-indent ox-beamer ox-twbs)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -216,7 +218,7 @@ It should only modify the values of Spacemacs settings."
                                :size 13
                                :weight normal
                                :width normal
-                               :powerline-scale 0.95)
+                               :powerline-scale 1.2)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands `M-x' (after pressing on the leader key).
@@ -449,7 +451,7 @@ before packages are loaded."
         ;; php indentation rules for work (pt. 1)
         php-mode-force-pear t
 
-        ;; omg I need caching helm projectile is insanely slow on the develop
+        ;; omg I need caching! helm projectile is insanely slow on the develop
         ;; branch without it
         projectile-enable-caching t
         ;; evil-emacs-state-cursor '("chartreuse3" (bar . 2))
@@ -546,7 +548,25 @@ before packages are loaded."
                          (if (display-graphic-p frame)
                              1 0)))
 
-  (add-hook 'after-make-frame-functions 'contextual-menubar))
+  (add-hook 'after-make-frame-functions 'contextual-menubar)
+
+  ;; org-mode stuff
+                                        ; define general org mode keybindings
+  (spacemacs/declare-prefix "o" "Org Mode Global")
+  (spacemacs/set-leader-keys "oa" 'org-agenda)
+  (spacemacs/set-leader-keys "oc" 'org-capture)
+
+                                        ; more general settings
+  (setq org-ellipsis "⤵")
+  (setq org-src-fontify-natively t)
+  (setq org-log-done 'time)
+  (setq org-timer-default-timer 30)
+
+                                        ; Load additional org exporter
+  (load-library "ox-twbs")
+  (load-library "ox-beamer")
+  (setq org-export-backends '(beamer html latex md gfm))
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -565,11 +585,11 @@ This function is called at the very end of Spacemacs initialization."
  '(ansi-color-names-vector
    ["#2d3743" "#ff4242" "#74af68" "#dbdb95" "#34cae2" "#008b8b" "#00ede1" "#e1e1e0"])
  '(evil-want-Y-yank-to-eol nil)
- '(fci-rule-color "#37474f" t)
+ '(fci-rule-color "#37474f")
  '(hl-sexp-background-color "#1c1f26")
  '(package-selected-packages
    (quote
-    (vimrc-mode perl6-mode flycheck-perl6 dactyl-mode org-category-capture enh-ruby-mode undohist dtrt-indent sqlup-mode sql-indent reveal-in-osx-finder pbcopy osx-trash osx-dictionary launchctl ag confluence xml-rpc xkcd powerline spinner hydra parent-mode window-purpose imenu-list projectile pkg-info epl flx smartparens iedit anzu evil goto-chg undo-tree highlight diminish bind-map bind-key packed f dash s helm avy helm-core async popup org-projectile org-present org-pomodoro org-download org-brain gnuplot evil-org web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode impatient-mode htmlize simple-httpd helm-css-scss haml-mode emmet-mode company-web web-completion-data typit mmt sudoku selectric-mode pacmacs dash-functional 2048-game rainbow-mode rainbow-identifiers dockerfile-mode docker json-mode tablist docker-tramp json-snatcher json-reformat color-identifiers-mode fasd slack circe oauth2 websocket alert log4e gntp yaml-mode material-theme yapfify xterm-color smeargle shell-pop rvm ruby-tools ruby-test-mode ruby-refactor rubocop rspec-mode robe rbenv rake pyvenv pytest pyenv-mode py-isort pip-requirements phpunit phpcbf php-extras php-auto-yasnippets orgit noflet nix-mode multi-term mmm-mode minitest meghanada markdown-toc markdown-mode magit-gitflow lush-theme live-py-mode insert-shebang hy-mode helm-pydoc helm-nixos-options helm-gitignore helm-company helm-c-yasnippet groovy-mode groovy-imports pcache gradle-mode gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md geben fuzzy flycheck-pos-tip pos-tip flycheck-bashate flycheck fish-mode evil-magit magit magit-popup git-commit with-editor eshell-z eshell-prompt-extras esh-help ensime sbt-mode scala-mode emojify ht emoji-cheat-sheet-plus drupal-mode diff-hl cython-mode company-statistics company-shell company-php ac-php-core xcscope php-mode company-nixos-options nixos-options company-emoji company-emacs-eclim eclim company-anaconda company chruby bundler inf-ruby browse-at-remote auto-yasnippet yasnippet anaconda-mode pythonic ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org symon string-inflection spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el password-generator paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav editorconfig dumb-jump define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line)))
+    (company-auctex auctex ox-gfm vimrc-mode perl6-mode flycheck-perl6 dactyl-mode org-category-capture enh-ruby-mode undohist dtrt-indent sqlup-mode sql-indent reveal-in-osx-finder pbcopy osx-trash osx-dictionary launchctl ag confluence xml-rpc xkcd powerline spinner hydra parent-mode window-purpose imenu-list projectile pkg-info epl flx smartparens iedit anzu evil goto-chg undo-tree highlight diminish bind-map bind-key packed f dash s helm avy helm-core async popup org-projectile org-present org-pomodoro org-download org-brain gnuplot evil-org web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode impatient-mode htmlize simple-httpd helm-css-scss haml-mode emmet-mode company-web web-completion-data typit mmt sudoku selectric-mode pacmacs dash-functional 2048-game rainbow-mode rainbow-identifiers dockerfile-mode docker json-mode tablist docker-tramp json-snatcher json-reformat color-identifiers-mode fasd slack circe oauth2 websocket alert log4e gntp yaml-mode material-theme yapfify xterm-color smeargle shell-pop rvm ruby-tools ruby-test-mode ruby-refactor rubocop rspec-mode robe rbenv rake pyvenv pytest pyenv-mode py-isort pip-requirements phpunit phpcbf php-extras php-auto-yasnippets orgit noflet nix-mode multi-term mmm-mode minitest meghanada markdown-toc markdown-mode magit-gitflow lush-theme live-py-mode insert-shebang hy-mode helm-pydoc helm-nixos-options helm-gitignore helm-company helm-c-yasnippet groovy-mode groovy-imports pcache gradle-mode gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md geben fuzzy flycheck-pos-tip pos-tip flycheck-bashate flycheck fish-mode evil-magit magit magit-popup git-commit with-editor eshell-z eshell-prompt-extras esh-help ensime sbt-mode scala-mode emojify ht emoji-cheat-sheet-plus drupal-mode diff-hl cython-mode company-statistics company-shell company-php ac-php-core xcscope php-mode company-nixos-options nixos-options company-emoji company-emacs-eclim eclim company-anaconda company chruby bundler inf-ruby browse-at-remote auto-yasnippet yasnippet anaconda-mode pythonic ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org symon string-inflection spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el password-generator paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav editorconfig dumb-jump define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line)))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
