@@ -220,8 +220,7 @@ It should only modify the values of Spacemacs settings."
                                "Source Code Pro"
                                :size 13
                                :weight normal
-                               :width normal
-                               :powerline-scale 1.2)
+                               :width normal)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands `M-x' (after pressing on the leader key).
@@ -426,6 +425,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; actually load magit-gerrit!
   (with-eval-after-load 'magit
     (require 'magit-gerrit))
+  (setq-default git-enable-magit-svn-plugin t)
   )
 
 (defun dotspacemacs/user-config ()
@@ -585,13 +585,16 @@ before packages are loaded."
   ;; TODO: figure out why when I eval this manually, it does everything I want
   ;; but doesn't actually work on start-up
   ;; (unless window-system
+  ;; )
   (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
   (global-set-key (kbd "<mouse-5>") 'scroll-up-line)
   (define-key evil-normal-state-map (kbd "<mouse-4>") 'scroll-down-line)
   (define-key evil-normal-state-map (kbd "<mouse-5>") 'scroll-up-line)
   (define-key evil-insert-state-map (kbd "<mouse-4>") 'scroll-down-line)
   (define-key evil-insert-state-map (kbd "<mouse-5>") 'scroll-up-line)
-  ;; )
+
+  ;; force loading this on startup, since it will be loaded by the daemon before I see my desktop anyway
+  (evil-magit-init)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -609,11 +612,11 @@ This function is called at the very end of Spacemacs initialization."
  '(evil-want-Y-yank-to-eol nil)
  '(package-selected-packages
    (quote
-    (magit-gerrit yapfify yaml-mode xterm-color xkcd ws-butler winum which-key web-mode volatile-highlights vimrc-mode vi-tilde-fringe uuidgen use-package typit mmt toc-org tagedit symon sudoku string-inflection sqlup-mode sql-indent spaceline smeargle slim-mode slack circe oauth2 websocket shell-pop selectric-mode scss-mode sass-mode rvm ruby-tools ruby-test-mode ruby-refactor rubocop rspec-mode robe restart-emacs rbenv rake rainbow-mode rainbow-identifiers rainbow-delimiters pyvenv pytest pyenv-mode py-isort pug-mode powerline popwin pip-requirements phpunit phpcbf php-extras php-auto-yasnippets persp-mode perl6-mode pcre2el password-generator paradox spinner pacmacs ox-gfm orgit org-projectile org-category-capture org-present org-pomodoro org-download org-bullets org-brain org-plus-contrib open-junk-file noflet nix-mode neotree multi-term move-text mmm-mode minitest meghanada material-theme markdown-toc markdown-mode magit-gitflow macrostep lush-theme lorem-ipsum live-py-mode linum-relative link-hint less-css-mode insert-shebang info+ indent-guide impatient-mode simple-httpd hydra hy-mode dash-functional hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-pydoc helm-purpose window-purpose imenu-list helm-projectile helm-nixos-options helm-mode-manager helm-make projectile helm-gitignore request helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag haml-mode gradle-mode google-translate golden-ratio gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md geben fuzzy flycheck-pos-tip pos-tip flycheck-perl6 flycheck-bashate flycheck pkg-info epl flx-ido flx fish-mode fill-column-indicator fasd fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit magit git-commit with-editor evil-lisp-state smartparens evil-lion evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight eshell-z eshell-prompt-extras esh-help ensime sbt-mode scala-mode enh-ruby-mode emojify ht emoji-cheat-sheet-plus emmet-mode elisp-slime-nav editorconfig dumb-jump dtrt-indent drupal-mode dockerfile-mode docker json-mode tablist magit-popup docker-tramp json-snatcher json-reformat diminish diff-hl define-word dactyl-mode cython-mode confluence xml-rpc company-web web-completion-data company-statistics company-shell company-plsense company-php ac-php-core xcscope php-mode company-nixos-options nixos-options company-emoji company-emacs-eclim eclim company-auctex company-anaconda company column-enforce-mode color-identifiers-mode clean-aindent-mode chruby bundler inf-ruby browse-at-remote bind-map bind-key auto-yasnippet yasnippet auto-highlight-symbol auto-compile packed auctex anaconda-mode pythonic f alert log4e gntp aggressive-indent ag adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell 2048-game))))
+    (geben yapfify yaml-mode xterm-color xkcd ws-butler winum which-key web-mode volatile-highlights vimrc-mode vi-tilde-fringe uuidgen use-package typit mmt toc-org tagedit symon sudoku string-inflection sqlup-mode sql-indent spaceline smeargle slim-mode slack circe websocket shell-pop selectric-mode scss-mode sass-mode rvm ruby-tools ruby-test-mode ruby-refactor rubocop rspec-mode robe restart-emacs rbenv rake rainbow-identifiers rainbow-delimiters pyvenv pytest pyenv-mode py-isort pug-mode powerline popwin pip-requirements phpunit phpcbf php-extras php-auto-yasnippets persp-mode perl6-mode pcre2el password-generator paradox pacmacs ox-gfm org-projectile org-category-capture org-present org-pomodoro org-download org-bullets org-brain org-plus-contrib open-junk-file noflet nix-mode neotree multi-term move-text mmm-mode minitest meghanada material-theme markdown-toc markdown-mode macrostep lush-theme lorem-ipsum live-py-mode linum-relative link-hint less-css-mode insert-shebang info+ indent-guide impatient-mode simple-httpd hydra hy-mode dash-functional hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-pydoc helm-purpose window-purpose imenu-list helm-projectile helm-nixos-options helm-mode-manager helm-make projectile helm-gitignore request helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag haml-mode gradle-mode google-translate golden-ratio gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter git-commit gh-md fuzzy flycheck-pos-tip pos-tip flycheck-perl6 flycheck-bashate flycheck pkg-info epl flx-ido flx fish-mode fill-column-indicator fasd fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit ghub with-editor evil-lisp-state smartparens evil-lion evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight eshell-z eshell-prompt-extras esh-help ensime sbt-mode scala-mode enh-ruby-mode emojify ht emoji-cheat-sheet-plus emmet-mode elisp-slime-nav editorconfig dumb-jump dtrt-indent drupal-mode dockerfile-mode docker json-mode tablist magit-popup docker-tramp json-snatcher json-reformat diminish diff-hl define-word dactyl-mode cython-mode confluence xml-rpc company-web web-completion-data company-statistics company-shell company-plsense company-php ac-php-core xcscope php-mode company-nixos-options nixos-options company-emoji company-emacs-eclim eclim company-auctex company-anaconda company column-enforce-mode color-identifiers-mode clean-aindent-mode chruby bundler inf-ruby browse-at-remote bind-map bind-key auto-yasnippet yasnippet auto-highlight-symbol auto-compile packed anaconda-mode pythonic f alert log4e gntp aggressive-indent ag s dash ace-window ace-link ace-jump-helm-line helm avy helm-core async ac-ispell auto-complete popup 2048-game))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(term ((t (:inherit default)))))
 )
