@@ -28,3 +28,6 @@
 [submodule "zplug"]
 	path = zplug
 	url = git@github.com:zplug/zplug.git
+[submodule "misc-git/spacemacs-geben"]
+	path = misc-git/spacemacs-geben
+	url = git@github.com:rubberydub/spacemacs-geben.git
