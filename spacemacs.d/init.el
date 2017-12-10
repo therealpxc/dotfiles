@@ -48,9 +48,12 @@ This function should only modify configuration layer settings."
      emoji
 
      (scala :variables
-            scala-enable-eldoc t
+            ;; type-at-point is too slow to use on cursor movement.
+            ;; Access it explicitly with ',-h-t' instead
+            scala-enable-eldoc nil
             scala-auto-insert-asterisk-in-comments t
-            scala-use-unicode-arrows t)
+            scala-use-unicode-arrows t
+            scala-indent:step 4)
 
      php
      geben      ;; remote debugging for PHP (had to clone geben layer into ~/.emacs.d/private/geben
@@ -95,7 +98,7 @@ This function should only modify configuration layer settings."
      xkcd
 
      ;; I think something will have to be added for Google authentication for this :-()
-     ;; confluence ;; Atlassian wiki
+     confluence ;; Atlassian wiki
 
 
      (sql :variables
@@ -103,7 +106,7 @@ This function should only modify configuration layer settings."
 
      ;; add undohist (my 'own' layer-- thanks razzius!)
      ;; https://github.com/razzius/.spacemacs.d/blob/9696f99b6d782d01aa03be6a356a181d3aab3946/layers/razziundohist/packages.el
-     undohist
+     ;; undohist ;; TODO: make this unfuck magit, figure out some magit shit for dropping a single commit in a rebase
 
      ;; dactyl-mode: vim and vimperrator config highlighting
      vimscript
@@ -113,7 +116,7 @@ This function should only modify configuration layer settings."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(ag dtrt-indent ox-beamer ox-twbs)
+   dotspacemacs-additional-packages '(ag dtrt-indent ox-twbs ox-confluence magit-gerrit)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -417,8 +420,12 @@ This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
-  (push '("melpa-stable" . "stable.melpa.org/packages/") configuration-layer--elpa-archives)
-  (push '("ensime" . "melpa-stable") package-pinned-packages)
+  ;; (push '("melpa-stable" . "stable.melpa.org/packages/") configuration-layer--elpa-archives)
+  ;; (push '("ensime" . "melpa-stable") package-pinned-packages)
+
+  ;; actually load magit-gerrit!
+  (with-eval-after-load 'magit
+    (require 'magit-gerrit))
   )
 
 (defun dotspacemacs/user-config ()
@@ -428,8 +435,10 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
   ;; (linum-relative-global-mode)
-  (linum-relative-toggle)
+  (linum-relative-on)
 
+  ;; make spacemacs magit usable with emacs as $EDITOR
+  (global-git-commit-mode t)
 
   ;; prettier dividers for terminal emacs
   ;; (set-face-background 'vertical-border "black")
@@ -460,6 +469,9 @@ before packages are loaded."
         evil-esc-delay 0
 
         system-uses-terminfo nil
+
+        ;; whitespace-style '(face tabs spaces trailing lines space-before-tab newline indentation empty space-after-tab tab-mark)
+        whitespace-style '(face tabs spaces trailing space-before-tab newline indentation empty space-after-tab tab-mark)
         )
   (custom-set-faces
    '(term ((t (:inherit default)))))
@@ -469,14 +481,18 @@ before packages are loaded."
    ;; general indentation rules for me
    indent-tabs-mode nil
    tab-width 2
-   c-basic-offset 2)
+   c-basic-offset 2
+   scala-indent:step 4
 
-  ;; Enable mouse support
-  (unless window-system
-    (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
-    (global-set-key (kbd "<mouse-5>") 'scroll-up-line))
+   ;; magit-gerrit configuration
+   magit-gerrit-ssh-creds "pcallahan@gerrit.sigfig.com:2222"
+   magit-gerrit-remote "gerrit"
+   )
 
 
+
+
+  ;; TODO: review which of these are necessary and which can be moved into the layer configs with :variables
   ;; php indentation rules for work (pt. 2)
   (add-hook 'php-mode-hook
             '(lambda ()
@@ -495,8 +511,7 @@ before packages are loaded."
   (add-hook 'scala-mode-hook
             '(lambda ()
                (setq tab-width 4
-                     c-basic-offset 4
-                     scala-indent:step 4)))
+                     c-basic-offset 4)))
 
   ;; hocon indentation is the same as the rules I prefer in general, so none is
   ;; needed here.
@@ -514,9 +529,9 @@ before packages are loaded."
   (spacemacs/set-leader-keys "ps" 'helm-projectile-ag)
 
   ;; autodetect indentation for open files and configure Spacemacs accordingly
-  (add-hook 'prog-mode-hook #'(lambda ()
-                                (dtrt-indent-mode)
-                                (dtrt-indent-adapt)))
+  ;; (add-hook 'prog-mode-hook #'(lambda ()
+  ;;                               (dtrt-indent-mode)
+  ;;                               (dtrt-indent-adapt)))
 
   (add-hook 'ruby-mode-hook #'(lambda ()
                                 (modify-syntax-entry ?_ "w")))
@@ -563,9 +578,20 @@ before packages are loaded."
   (setq org-timer-default-timer 30)
 
                                         ; Load additional org exporter
-  (load-library "ox-twbs")
-  (load-library "ox-beamer")
-  (setq org-export-backends '(beamer html latex md gfm))
+  ;; (load-library "ox-twbs")
+  ;; (load-library "ox-confluence")
+
+  ;; Enable mouse support
+  ;; TODO: figure out why when I eval this manually, it does everything I want
+  ;; but doesn't actually work on start-up
+  ;; (unless window-system
+  (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
+  (global-set-key (kbd "<mouse-5>") 'scroll-up-line)
+  (define-key evil-normal-state-map (kbd "<mouse-4>") 'scroll-down-line)
+  (define-key evil-normal-state-map (kbd "<mouse-5>") 'scroll-up-line)
+  (define-key evil-insert-state-map (kbd "<mouse-4>") 'scroll-down-line)
+  (define-key evil-insert-state-map (kbd "<mouse-5>") 'scroll-up-line)
+  ;; )
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -580,42 +606,14 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-faces-vector
-   [default bold shadow italic underline bold bold-italic bold])
- '(ansi-color-names-vector
-   ["#2d3743" "#ff4242" "#74af68" "#dbdb95" "#34cae2" "#008b8b" "#00ede1" "#e1e1e0"])
  '(evil-want-Y-yank-to-eol nil)
- '(fci-rule-color "#37474f")
- '(hl-sexp-background-color "#1c1f26")
  '(package-selected-packages
    (quote
-    (company-auctex auctex ox-gfm vimrc-mode perl6-mode flycheck-perl6 dactyl-mode org-category-capture enh-ruby-mode undohist dtrt-indent sqlup-mode sql-indent reveal-in-osx-finder pbcopy osx-trash osx-dictionary launchctl ag confluence xml-rpc xkcd powerline spinner hydra parent-mode window-purpose imenu-list projectile pkg-info epl flx smartparens iedit anzu evil goto-chg undo-tree highlight diminish bind-map bind-key packed f dash s helm avy helm-core async popup org-projectile org-present org-pomodoro org-download org-brain gnuplot evil-org web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode impatient-mode htmlize simple-httpd helm-css-scss haml-mode emmet-mode company-web web-completion-data typit mmt sudoku selectric-mode pacmacs dash-functional 2048-game rainbow-mode rainbow-identifiers dockerfile-mode docker json-mode tablist docker-tramp json-snatcher json-reformat color-identifiers-mode fasd slack circe oauth2 websocket alert log4e gntp yaml-mode material-theme yapfify xterm-color smeargle shell-pop rvm ruby-tools ruby-test-mode ruby-refactor rubocop rspec-mode robe rbenv rake pyvenv pytest pyenv-mode py-isort pip-requirements phpunit phpcbf php-extras php-auto-yasnippets orgit noflet nix-mode multi-term mmm-mode minitest meghanada markdown-toc markdown-mode magit-gitflow lush-theme live-py-mode insert-shebang hy-mode helm-pydoc helm-nixos-options helm-gitignore helm-company helm-c-yasnippet groovy-mode groovy-imports pcache gradle-mode gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md geben fuzzy flycheck-pos-tip pos-tip flycheck-bashate flycheck fish-mode evil-magit magit magit-popup git-commit with-editor eshell-z eshell-prompt-extras esh-help ensime sbt-mode scala-mode emojify ht emoji-cheat-sheet-plus drupal-mode diff-hl cython-mode company-statistics company-shell company-php ac-php-core xcscope php-mode company-nixos-options nixos-options company-emoji company-emacs-eclim eclim company-anaconda company chruby bundler inf-ruby browse-at-remote auto-yasnippet yasnippet anaconda-mode pythonic ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org symon string-inflection spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el password-generator paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav editorconfig dumb-jump define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line)))
- '(vc-annotate-background nil)
- '(vc-annotate-color-map
-   (quote
-    ((20 . "#f36c60")
-     (40 . "#ff9800")
-     (60 . "#fff59d")
-     (80 . "#8bc34a")
-     (100 . "#81d4fa")
-     (120 . "#4dd0e1")
-     (140 . "#b39ddb")
-     (160 . "#f36c60")
-     (180 . "#ff9800")
-     (200 . "#fff59d")
-     (220 . "#8bc34a")
-     (240 . "#81d4fa")
-     (260 . "#4dd0e1")
-     (280 . "#b39ddb")
-     (300 . "#f36c60")
-     (320 . "#ff9800")
-     (340 . "#fff59d")
-     (360 . "#8bc34a"))))
- '(vc-annotate-very-old-color nil))
+    (magit-gerrit yapfify yaml-mode xterm-color xkcd ws-butler winum which-key web-mode volatile-highlights vimrc-mode vi-tilde-fringe uuidgen use-package typit mmt toc-org tagedit symon sudoku string-inflection sqlup-mode sql-indent spaceline smeargle slim-mode slack circe oauth2 websocket shell-pop selectric-mode scss-mode sass-mode rvm ruby-tools ruby-test-mode ruby-refactor rubocop rspec-mode robe restart-emacs rbenv rake rainbow-mode rainbow-identifiers rainbow-delimiters pyvenv pytest pyenv-mode py-isort pug-mode powerline popwin pip-requirements phpunit phpcbf php-extras php-auto-yasnippets persp-mode perl6-mode pcre2el password-generator paradox spinner pacmacs ox-gfm orgit org-projectile org-category-capture org-present org-pomodoro org-download org-bullets org-brain org-plus-contrib open-junk-file noflet nix-mode neotree multi-term move-text mmm-mode minitest meghanada material-theme markdown-toc markdown-mode magit-gitflow macrostep lush-theme lorem-ipsum live-py-mode linum-relative link-hint less-css-mode insert-shebang info+ indent-guide impatient-mode simple-httpd hydra hy-mode dash-functional hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-pydoc helm-purpose window-purpose imenu-list helm-projectile helm-nixos-options helm-mode-manager helm-make projectile helm-gitignore request helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag haml-mode gradle-mode google-translate golden-ratio gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md geben fuzzy flycheck-pos-tip pos-tip flycheck-perl6 flycheck-bashate flycheck pkg-info epl flx-ido flx fish-mode fill-column-indicator fasd fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit magit git-commit with-editor evil-lisp-state smartparens evil-lion evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight eshell-z eshell-prompt-extras esh-help ensime sbt-mode scala-mode enh-ruby-mode emojify ht emoji-cheat-sheet-plus emmet-mode elisp-slime-nav editorconfig dumb-jump dtrt-indent drupal-mode dockerfile-mode docker json-mode tablist magit-popup docker-tramp json-snatcher json-reformat diminish diff-hl define-word dactyl-mode cython-mode confluence xml-rpc company-web web-completion-data company-statistics company-shell company-plsense company-php ac-php-core xcscope php-mode company-nixos-options nixos-options company-emoji company-emacs-eclim eclim company-auctex company-anaconda company column-enforce-mode color-identifiers-mode clean-aindent-mode chruby bundler inf-ruby browse-at-remote bind-map bind-key auto-yasnippet yasnippet auto-highlight-symbol auto-compile packed auctex anaconda-mode pythonic f alert log4e gntp aggressive-indent ag adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell 2048-game))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(term ((t (:inherit default)))))
+ )
 )
