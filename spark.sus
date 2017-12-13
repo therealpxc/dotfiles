@@ -12,6 +12,7 @@ card all {
 	spark card nix
 	spark card misc
   spark card emacs
+  spark card touch
 }
 
 card zsh {
@@ -142,4 +143,9 @@ card misc {
 
   .weechat
   .vimperatorrc
+}
+
+card touch {
+  .config/touchpadrc
+  .config/touchegg/touchegg.conf
 }
