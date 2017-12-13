@@ -1,5 +1,6 @@
 package bang-bang
 package basename-compat
+package config
 package errno
 package fonts
 package foreign-env
@@ -9,7 +10,6 @@ package git@github.com:simnalamburt/fish-sensible.git
 package git@github.com:therealpxc/tmux-zen.git
 package gityaw
 package grc
-package https://github.com/jitakirin/pkg-keychain.git
 package https://github.com/oh-my-fish/plugin-config
 package https://github.com/therealpxc/plugin-emacs.git
 package https://github.com/therealpxc/plugin-fasd
