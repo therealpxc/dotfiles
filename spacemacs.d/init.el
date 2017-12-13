@@ -468,13 +468,14 @@ before packages are loaded."
         ;; I do not want to use Escape followed by <x> to effect M-x!
         evil-esc-delay 0
 
+        ;; is this for truecolor support?
         system-uses-terminfo nil
 
-        ;; whitespace-style '(face tabs spaces trailing lines space-before-tab newline indentation empty space-after-tab tab-mark)
         whitespace-style '(face tabs spaces trailing space-before-tab newline indentation empty space-after-tab tab-mark)
+        ;; don't ask me if I want to follow symlinks when I open them
+        vc-follow-symlinks t
         )
-  (custom-set-faces
-   '(term ((t (:inherit default)))))
+
   ;; buffer-local settings -- defaults
   (setq-default
 
