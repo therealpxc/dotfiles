@@ -34,41 +34,12 @@ Word Wrap Column=80
 Encoding Prober Type=1
 Fallback Encoding=ISO-8859-15
 
-[Printing][HeaderFooter]
-FooterBackground=211,211,211
-FooterBackgroundEnabled=false
-FooterEnabled=true
-FooterForeground=0,0,0
-FooterFormatCenter=
-FooterFormatLeft=
-FooterFormatRight=%U
-HeaderBackground=211,211,211
-HeaderBackgroundEnabled=false
-HeaderEnabled=true
-HeaderFooterFont=Sans Serif,10,-1,5,50,0,0,0,0,0
-HeaderForeground=0,0,0
-HeaderFormatCenter=%f
-HeaderFormatLeft=%y
-HeaderFormatRight=%p
-
-[Printing][Layout]
-BackgroundColorEnabled=false
-BoxColor=invalid
-BoxEnabled=false
-BoxMargin=6
-BoxWidth=1
-ColorScheme=Printing
-
-[Printing][Text]
-Legend=false
-LineNumbers=false
-
 [Renderer]
-Animate Bracket Matching=true
+Animate Bracket Matching=false
 Schema=KDE
-Show Indentation Lines=true
-Show Whole Bracket Expression=true
-Word Wrap Marker=true
+Show Indentation Lines=false
+Show Whole Bracket Expression=false
+Word Wrap Marker=false
 
 [View]
 Allow Mark Menu=true

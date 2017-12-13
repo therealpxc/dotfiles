@@ -1,0 +1,13 @@
+[autodisable]
+DisableWhenMousePluggedIn=true
+MouseBlacklist=USB Trackpoint pointing device,DualPoint Stick,ThinkPad USB Keyboard with TrackPoint
+OnlyDisableTapAndScrollOnKeyboardActivity=false
+
+[parameters]
+CircScrollDelta=5.73
+HorizScrollDelta=2.5
+HorizTwoFingerScroll=true
+MaxTapMove=2.7
+Tapping=false
+VertScrollDelta=1.7
+VertTwoFingerScroll=true

@@ -146,6 +146,7 @@ card misc {
 }
 
 card touch {
+  into ~
   .config/touchpadrc
   .config/touchegg/touchegg.conf
 }
