@@ -11,6 +11,6 @@ Parent=FALLBACK/
 TrimTrailingSpacesInSelectedText=true
 
 [Scrolling]
-HistoryMode=1
+HistoryMode=0
 HistorySize=9001
 ScrollBarPosition=2
