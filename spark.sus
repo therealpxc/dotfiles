@@ -61,7 +61,7 @@ card fish {
   {
     into .config
     outof config
-    
+
     # fish itself
     fish/config.fish
     fish/conf.d
@@ -122,7 +122,7 @@ card misc {
 
   # map capslock to compose in KDE
   .config/kxkbrc
-  
+
 
   .kde/share/apps/konsole/Naked.profile
   ".kde/share/apps/konsole/Transparent Linux Colors.colorscheme"
@@ -134,7 +134,7 @@ card misc {
   .config/quassel-irc.org/settings.qss
 
   .config/khotkeysrc
-  
+
   .config/katevirc
               .config/katesyntaxhighlightingrc
               .config/katerc
