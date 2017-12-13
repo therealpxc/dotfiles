@@ -11,3 +11,7 @@ end
 # does this also need to be here?
 # set -gx EDITOR vi
 set -gx EDITOR "emacsclient --create-frame --tty"
+
+function e --description "edit file"
+  fasd -f -e $EDITOR $argv
+end
