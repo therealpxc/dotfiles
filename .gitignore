@@ -10,3 +10,4 @@ config/katerc
 config/katemetainfos
 config/katepartrc
 config/konsolerc
+spacemacs.d/.spacemacs.env
