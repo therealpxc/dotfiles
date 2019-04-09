@@ -13,6 +13,7 @@ card all {
 	spark card misc
   spark card emacs
   spark card touch
+  spark card weechat
 }
 
 card zsh {
@@ -142,7 +143,6 @@ card misc {
               .config/kateschemarc
               .config/katepartrc
 
-  .weechat
   .vimperatorrc
 }
 
@@ -150,4 +150,14 @@ card touch {
   into ~
   .config/touchpadrc
   .config/touchegg/touchegg.conf
+}
+
+card weechat {
+  into ~/.weechat
+  outof weechat
+  irc.conf
+  plugins.conf
+  script.conf
+  sec.conf
+  weechat.conf
 }
