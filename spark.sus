@@ -108,7 +108,7 @@ card nix {
 
 card misc {
   into ~
-  #.byobu -> .config/byobu # TRY NOO MORE BYOBU
+  #.byobu -> .config/byobu # TRY NO MORE BYOBU
   #.config/byobu/keybindings.tmux
   .tmux.conf
   #.tmux.conf -> .byobu/.tmux.conf
@@ -117,10 +117,8 @@ card misc {
   .config/gtkrc
   .config/gtkrc-2.0
 
-  # kde4 globals
-  #.kde/share/config/kdeglobals # DELET ? TRY NEW
   # kde5 globals
-  # .config/kdeglobals # TRY NEW
+  .config/kdeglobals
 
   # map capslock to compose in KDE
   .config/kxkbrc

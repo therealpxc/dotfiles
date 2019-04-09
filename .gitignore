@@ -1,7 +1,5 @@
 config/omf/users/root.fish
 fresh/build
-weechat/script/plugins.xml.gz
-weechat/*.log
 /tmux
 !/tmux/plugins/tpm
 config/katerc

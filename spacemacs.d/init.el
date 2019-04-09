@@ -33,12 +33,11 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(ansible
-     rust
+   '(
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
-     ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
-     ;; `M-m f e R' (Emacs style) to install them.
+     ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
+     ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      helm
      auto-completion
@@ -53,9 +52,6 @@ This function should only modify configuration layer settings."
      ;; stuff I've added!
      emoji
 
-     ;; broken for now, try again later
-     ;; spaceline-all-the-icons
-
      (scala :variables
             ;; type-at-point is too slow to use on cursor movement.
             ;; Access it explicitly with ',-h-t' instead
@@ -68,7 +64,7 @@ This function should only modify configuration layer settings."
 
      ;; tabbar
      geben      ;; remote debugging for PHP (had to clone geben layer into ~/.emacs.d/private/geben
-     gtags    ;; apparently enhances the PHP layer (requires GNU Global installed)
+     ;; gtags    ;; apparently enhances the PHP layer (requires GNU Global installed)
      python
      nixos
      shell-scripts
@@ -141,6 +137,8 @@ This function should only modify configuration layer settings."
      tmux ;; like tmux-navigator for vim
 
      c-c++
+     ansible
+     rust
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -149,10 +147,8 @@ This function should only modify configuration layer settings."
    dotspacemacs-additional-packages '(ag dtrt-indent ox-twbs ox-confluence magit-gerrit)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
-
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '()
-
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
    ;; `used-only' installs only explicitly used packages and deletes any unused
@@ -177,37 +173,17 @@ It should only modify the values of Spacemacs settings."
    ;; `--insecure' which forces the value of this variable to nil.
    ;; (default t)
    dotspacemacs-elpa-https t
-
    ;; Maximum allowed time in seconds to contact an ELPA repository.
-   ;; (default 5)
    dotspacemacs-elpa-timeout 5
-
-   ;; Set `gc-cons-threshold' and `gc-cons-percentage' when startup finishes.
-   ;; This is an advanced option and should not be changed unless you suspect
-   ;; performance issues due to garbage collection operations.
-   ;; (default '(100000000 0.1))
-   dotspacemacs-gc-cons '(100000000 0.1)
-
-   ;; If non-nil then Spacelpa repository is the primary source to install
-   ;; a locked version of packages. If nil then Spacemacs will install the
-   ;; lastest version of packages from MELPA. (default nil)
-   dotspacemacs-use-spacelpa nil
-
-   ;; If non-nil then verify the signature for downloaded Spacelpa archives.
-   ;; (default nil)
-   dotspacemacs-verify-spacelpa-archives nil
-
    ;; If non-nil then spacemacs will check for updates at startup
    ;; when the current branch is not `develop'. Note that checking for
    ;; new versions works via git commands, thus it calls GitHub services
    ;; whenever you start Emacs. (default nil)
    dotspacemacs-check-for-update nil
-
    ;; If non-nil, a form that evaluates to a package directory. For example, to
    ;; use different package directories for different Emacs versions, set this
-   ;; to `emacs-version'. (default 'emacs-version)
-   dotspacemacs-elpa-subdirectory 'emacs-version
-
+   ;; to `emacs-version'.
+   dotspacemacs-elpa-subdirectory nil
    ;; One of `vim', `emacs' or `hybrid'.
    ;; `hybrid' is like `vim' except that `insert state' is replaced by the
    ;; `hybrid state' with `emacs' key bindings. The value can also be a list
@@ -215,10 +191,8 @@ It should only modify the values of Spacemacs settings."
    ;; section of the documentation for details on available variables.
    ;; (default 'vim)
    dotspacemacs-editing-style 'vim
-
    ;; If non-nil output loading progress in `*Messages*' buffer. (default nil)
    dotspacemacs-verbose-loading nil
-
    ;; Specify the startup banner. Default value is `official', it displays
    ;; the official spacemacs logo. An integer value is the index of text
    ;; banner, `random' chooses a random text banner in `core/banners'
@@ -233,9 +207,7 @@ It should only modify the values of Spacemacs settings."
    ;; `recents' `bookmarks' `projects' `agenda' `todos'.
    ;; List sizes may be nil, in which case
    ;; `spacemacs-buffer-startup-lists-length' takes effect.
-   dotspacemacs-startup-lists '((agenda . 7)
-                                (todos . 5)
-                                (recents . 5)
+   dotspacemacs-startup-lists '((recents . 5)
                                 (projects . 7))
 
    ;; True if the home buffer should respond to resize events. (default t)
@@ -562,8 +534,6 @@ It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; (push '("melpa-stable" . "stable.melpa.org/packages/") configuration-layer--elpa-archives)
   ;; (push '("ensime" . "melpa-stable") package-pinned-packages)
-
-
 
   ;; actually load magit-gerrit!
   (with-eval-after-load 'magit

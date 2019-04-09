@@ -5,8 +5,16 @@ GlobalNumTargets=0
 [Desktop Entry]
 DefaultProfile=Naked.profile
 
+[DownloadDialog Settings]
+Height 768=496
+Width 1366=700
+
 [Favorite Profiles]
 Favorites=
+
+[FileDialogSize]
+Height 768=480
+Width 1366=789
 
 [General]
 Config Revision=10
