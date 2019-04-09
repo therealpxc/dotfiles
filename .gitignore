@@ -1,7 +1,5 @@
 config/omf/users/root.fish
 fresh/build
-*.weechatlog
-weechat/logs/
 weechat/script/plugins.xml.gz
 weechat/*.log
 /tmux
