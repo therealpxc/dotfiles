@@ -2,14 +2,11 @@
 DefaultProfile=Naked.profile
 
 [Favorite Profiles]
-Favorites=Naked.profile,Bash.profile,Shell.profile
-
-[KonsoleWindow]
-ShowMenuBarByDefault=false
+Favorites=Bash.profile,Naked.profile
 
 [MainWindow]
-MenuBar=Disabled
+Height 1080=613
+State=AAAA/wAAAAD9AAAAAAAAAoAAAAHCAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
-
-[TabBar]
-TabBarVisibility=ShowTabBarWhenNeeded
+Width 1920=945
+Window-Maximized 900x1600=true

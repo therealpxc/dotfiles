@@ -1,7 +1,7 @@
 # Don't load oh-my-fish for non-interactive shells. Hopefully this will speed
 # up Emacs/Spacemacs' helm-projectile stuff.
 if not builtin status is-interactive
-  exit  
+  exit
 end
 
 # nix-darwin's fish module is still broken, so we have to do this to get our
@@ -19,4 +19,3 @@ set -gx OMF_CONFIG ~/.config/omf
 
 # Load oh-my-fish configuration.
 source $OMF_PATH/init.fish
-

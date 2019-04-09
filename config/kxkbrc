@@ -3,8 +3,8 @@ DisplayNames=
 LayoutList=
 LayoutLoopCount=-1
 Model=pc101
-Options[$d]
-ResetOldOptions=false
+Options=compose:caps,terminate:ctrl_alt_bksp,altwin:alt_super_win
+ResetOldOptions=true
 ShowFlag=false
 ShowLabel=true
 ShowLayoutIndicator=true

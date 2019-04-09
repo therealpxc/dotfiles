@@ -1,5 +1,6 @@
 function roll
   function rollspec -a spec
+    set -l spec (string replace '*' '×' $spec)
     # Creates a fish regex replacement string using the supplied arguments as
     # matching group names'
     function rearray
@@ -13,11 +14,11 @@ function roll
         echo save_regex_matches: invalid number of arguments 1>&2
         return 1
       end
-      
-      # the third argument and all arguments after 
+
+      # the third argument and all arguments after
       set -l selected $argv[(seq 3 (count $argv))]
       set -l matches (string replace -r "$pattern" (rearray $selected) -- "$str")
-      
+
       begin; set -l i 0; for name in $selected
         set i (math $i + 1)
         echo set $name $matches[$i]';'
@@ -27,7 +28,7 @@ function roll
 
     set -l reps_pattern '(?:(?<reps>\d+)x)'
     set -l count_pattern '(?<count>\d*)'
-    set -l mod_pattern '(?<op>[\-+*])(?<mod>\d+)'
+    set -l mod_pattern '(?<op>[\-+×])(?<mod>\d+)'
     set -l arg_pattern (string join '' \
       "(?<__has_reps>(?:$reps_pattern?))" \
       "(?:(?<__has_count>(?:$count_pattern))d)?" \
@@ -37,7 +38,7 @@ function roll
 
     ### ↓ begin parsing sole argument ↓ ###
     eval (save_regex_matches "$arg_pattern" "$spec" $base_match_names)
-    
+
     set -l reps 1
     test -n "$__has_reps"
       and eval (save_regex_matches $reps_pattern $__has_reps reps)
@@ -62,11 +63,11 @@ function roll
 
       set -l rolls_sum_str
       set rolls_sum_str (string join ' + ' $rolls)
-      
+
       echo -n -e '\t'
       test -n "$__has_mod"; and test $count -ne 1
         and echo -n '('
-      
+
       echo -n $rolls_sum_str
       test -n "$__has_mod"; and test $count -ne 1
         and echo -n ')'
@@ -74,7 +75,8 @@ function roll
       echo -n ' '
       test -n "$__has_mod"
         and echo -n [$op$mod] ''
-      
+
+      set op (string replace '×' '*' $op)
       test -n "$__has_mod" -o "$count" -ne 1
         and echo = (math '(' $rolls_sum_str ')' $op $mod)
         or echo

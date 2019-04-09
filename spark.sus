@@ -107,18 +107,19 @@ card nix {
 
 card misc {
   into ~
-  .byobu/keybindings.tmux
+  #.byobu -> .config/byobu # TRY NOO MORE BYOBU
+  #.config/byobu/keybindings.tmux
   .tmux.conf
-  .tmux.conf -> .byobu/.tmux.conf
+  #.tmux.conf -> .byobu/.tmux.conf
   .tmux
 
   .config/gtkrc
   .config/gtkrc-2.0
 
   # kde4 globals
-  .kde/share/config/kdeglobals
+  #.kde/share/config/kdeglobals # DELET ? TRY NEW
   # kde5 globals
-  .config/kdeglobals
+  # .config/kdeglobals # TRY NEW
 
   # map capslock to compose in KDE
   .config/kxkbrc
@@ -126,7 +127,7 @@ card misc {
 
   .kde/share/apps/konsole/Naked.profile
   ".kde/share/apps/konsole/Transparent Linux Colors.colorscheme"
-  .kde/share/config/yakuakerc
+  .config/yakuakerc
   .local/share/konsole/Bash.profile
   .local/share/konsole/Naked.profile
   ".local/share/konsole/Transparent Linux Colors.colorscheme"
