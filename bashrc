@@ -3,7 +3,7 @@ if [ -f ~/.nix-profile/etc/profile.d/nix.sh ]; then
 fi
 
 # load direnv hooks
-eval $(direnv hook bash)
+#eval $(direnv hook bash)
 
 if [ "$(uname)" = Darwin ]; then
   # Initialization for FDK command line tools.Sat Jun 10 18:04:41 2017
@@ -18,7 +18,7 @@ export BASH_IT="$HOME/.bash_it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
-export BASH_IT_THEME='sexy'
+export BASH_IT_THEME='pure'
 
 # (Advanced): Change this to the name of your remote repo if you
 # cloned bash-it with a remote other than origin such as `bash-it`.
