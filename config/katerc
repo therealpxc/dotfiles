@@ -5,16 +5,10 @@ GlobalNumTargets=0
 [Desktop Entry]
 DefaultProfile=Naked.profile
 
-[DownloadDialog Settings]
-Height 768=496
-Width 1366=700
 
 [Favorite Profiles]
 Favorites=
 
-[FileDialogSize]
-Height 768=480
-Width 1366=789
 
 [General]
 Config Revision=10
@@ -29,10 +23,6 @@ Show Menu Bar=true
 Show Status Bar=true
 Show Tab Bar=true
 Startup Session=manual
-
-[KFileDialog Settings]
-Recent Files[$e]=file:$HOME/Documents/Work/Themis/Notes/bad-deploy-shit,file:$HOME/Downloads/pia-us_california-aes-128-cbc-udp-ip.ovpn,file:$HOME/Documents/Work/Bernie/texting-guidelines,file:$HOME/Documents/Notes/irs-whatever,file:$HOME/dream-thelio-major,file:$HOME/Documents/Notes/apple-are-still-assholes-tho,file:$HOME/blue-cross-anthem-condition-care,file:$HOME/.config/fish/config.fish,file:///etc/nixos/modules/xcompose/pointless-extended/arrows.xcompose,file:///etc/nixos/modules/xcompose/pointless-extended/emojish.xcompose,file:///etc/nixos/modules/xcompose/pointless-extended/math.xcompose,file:///etc/nixos/modules/xcompose/pointless-extended/typographical.xcompose,file:///etc/nixos/modules/xcompose/pointless-extended/invisible.xcompose,file:///etc/nixos/modules/xcompose/pointless-extended/latin.xcompose,file:///etc/nixos/modules/xcompose/pointless-extended/macron.xcompose,file:///etc/nixos/modules/xcompose/pointless-extended/vertical.xcompose
-Recent URLs[$e]=file:$HOME/Downloads/
 
 [KTextEditor Document]
 Allow End of Line Detection=true
@@ -119,39 +109,9 @@ Word Completion=true
 Word Completion Minimal Word Length=3
 Word Completion Remove Tail=true
 
-[KTextEditor::Search]
-Replace History=,\xe2\x80\xa2,\\\\n\\\\1,\\\\1\\\\n,\\\\1,*,> ,xvdn,xvdo,\\\\n> ,\\\\n>,...,spark card ,card , ,__nix_profile_paths,__extra_profiles,  ,\\\\n,serial,emit,gen,__fish_inject_base_paths,rollspec,__save_regex_matches,;,generateDecisionTree,dent,(Util.indent(a,Util.indent(a,REPO,DOCKER_REGISTRY
-Search History=\s,\xc2\xb7,\xe2\x8b\x85,auth,query,Query_time,query_time,censorship,([A-Z\\\\s\\\\-().\\,0-9]+\\\\n),([A-Z\\\\s\\\\-().\\,]+\\\\n),([A-Z\\\\s\\\\-().]+\\\\n),([A-Z\\\\s\\\\-()]+\\\\n),^([A-Z\\\\s]+\\\\n),([A-Z\\\\s]+\\\\n),^([A-Z\\\\s]+$\\\\n),^([A-Z\\\\s]+\\\\n$),^([A-Z\\\\s]+\\\\n)$,([A-Z\\\\s]+),\\\\n,patrick,active listening,paraphrase,\\\\*\\\\*,^,^ +,xvdg,xvdf,`,\xe2\x80\xa6,pxc-common,card ,spark card,vimplugins,vim_customiz,One-line,  ,\\\\s+,Disabled for,__extra_profiles,__fish_inject_base_paths,writeTextFile,etc.,alacritty,configuration,etcConfigAppendix,toFiel,toFile,writeFile,\\\\t,IfStmt,\\\\n\\\\n,deepSerial,callSerial,emitAssignm,emitAssign,assignmentOpForLHS,emitASs,emitAssignmentOp,SETINDEX,IndexExpr,hasInt,instruction.op,getvar,GETVAR,comparison,e\\\\.emit,check,__fish_inject_paths,skill,skills,logic,ancient,brackets,arrows,bullets,__rollspec,rearray,gather_regex_matches,ds4drv,;,genswitchcont,genSwitchStatement,adent,(indent(,indent(,linesAt,treatTokens,slurp(,bufferedinput,CONSUL,REGISTRY,dns,DOCKER_REPO,convertmtoe,inputmetric,outputEnglish,output,meters_to_feet,outputenglish,[ \\\\-]
-
 [Konsole]
 AutoSyncronize=false
 SetEditor=false
 
-[MainWindow]
-Height 1080=1043
-Height 768=592
-Height 900=561
-MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAABXQAAAIxAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
-ToolBarsMovable=Disabled
-Width 1366=1190
-Width 1600=1396
-Width 1920=867
-Window-Maximized 1080x1920=false
-Window-Maximized 768x1366=true
-Window-Maximized 900x1600=false
-
 [Shortcuts]
-kate_mdi_toolview_kate_plugin_katesearch=none
-kate_mdi_toolview_kate_private_plugin_katefiletreeplugin=none
 kate_mdi_toolview_kate_private_plugin_katekonsoleplugin=F4
-kate_mdi_toolview_kateproject=none
-kate_mdi_toolview_kateprojectinfo=none
-
-[filetree]
-editShade=33,84,111
-listMode=false
-shadingEnabled=true
-showFullPathOnRoots=false
-sortRole=0
-viewShade=66,73,74

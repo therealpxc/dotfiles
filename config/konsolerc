@@ -3,10 +3,3 @@ DefaultProfile=Naked.profile
 
 [Favorite Profiles]
 Favorites=Bash.profile,Naked.profile
-
-[MainWindow]
-Height 1080=613
-State=AAAA/wAAAAD9AAAAAAAAAoAAAAHCAAAABAAAAAQAAAAIAAAACPwAAAAA
-ToolBarsMovable=Disabled
-Width 1920=945
-Window-Maximized 900x1600=true

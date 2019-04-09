@@ -1,5 +1,4 @@
 config/omf/users/root.fish
-config/katemetainfos
 fresh/build
 *.weechatlog
 weechat/logs/
@@ -7,3 +6,7 @@ weechat/script/plugins.xml.gz
 weechat/*.log
 /tmux
 !/tmux/plugins/tpm
+config/katerc
+config/katemetainfos
+config/katepartrc
+config/konsolerc
