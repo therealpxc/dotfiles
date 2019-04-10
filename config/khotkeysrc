@@ -61,9 +61,9 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_2Triggers0]
-Key=
+Key=Ctrl+Alt+T
 Type=SHORTCUT
-Uuid={516f0e8e-221b-4eb0-bea0-1eb7d274bd2d}
+Uuid={ce8a38c5-cc94-40b3-b510-ac0e59b77220}
 
 [Data_2]
 Comment=This group contains various examples demonstrating most of the features of KHotkeys. (Note that this group and all its actions are disabled by default.)
@@ -116,7 +116,7 @@ TriggersCount=1
 [Data_2_1Triggers0]
 Key=Ctrl+Alt+I
 Type=SHORTCUT
-Uuid={b4ded3b6-5492-4362-bdca-5bec2906161e}
+Uuid={46c12594-8b3b-4df9-8cc0-011f5050c1d1}
 
 [Data_2_2]
 Comment=After pressing Alt+Ctrl+H the input of 'Hello' will be simulated, as if you typed it.  This is especially useful if you have call to frequently type a word (for instance, 'unsigned').  Every keypress in the input is separated by a colon ':'. Note that the keypresses literally mean keypresses, so you have to write what you would press on the keyboard. In the table below, the left column shows the input and the right column shows what to type.\n\n"enter" (i.e. new line)                Enter or Return\na (i.e. small a)                          A\nA (i.e. capital a)                       Shift+A\n: (colon)                                  Shift+;\n' '  (space)                              Space
@@ -143,7 +143,7 @@ TriggersCount=1
 [Data_2_2Triggers0]
 Key=Ctrl+Alt+H
 Type=SHORTCUT
-Uuid={2bf58983-791e-405e-9536-e6ba860c273b}
+Uuid={edb1f006-456d-4811-9a1a-c5334e55045a}
 
 [Data_2_3]
 Comment=This action runs Konsole, after pressing Ctrl+Alt+T.
@@ -169,7 +169,7 @@ TriggersCount=1
 [Data_2_3Triggers0]
 Key=Ctrl+Alt+T
 Type=SHORTCUT
-Uuid={8199e7cf-556d-4150-b0ac-18dac220c933}
+Uuid={b39df6c3-a17c-4058-888c-bd83155cd36c}
 
 [Data_2_4]
 Comment=Read the comment on the "Type 'Hello'" action first.\n\nQt Designer uses Ctrl+F4 for closing windows.  In KDE, however, Ctrl+F4 is the shortcut for going to virtual desktop 4, so this shortcut does not work in Qt Designer.  Further, Qt Designer does not use KDE's standard Ctrl+W for closing the window.\n\nThis problem can be solved by remapping Ctrl+W to Ctrl+F4 when the active window is Qt Designer. When Qt Designer is active, every time Ctrl+W is pressed, Ctrl+F4 will be sent to Qt Designer instead. In other applications, the effect of Ctrl+W is unchanged.\n\nWe now need to specify three things: A new shortcut trigger on 'Ctrl+W', a new keyboard input action sending Ctrl+F4, and a new condition that the active window is Qt Designer.\nQt Designer seems to always have title 'Qt Designer by Trolltech', so the condition will check for the active window having that title.
@@ -214,7 +214,7 @@ TriggersCount=1
 [Data_2_4Triggers0]
 Key=Ctrl+W
 Type=SHORTCUT
-Uuid={75894566-c6d2-4a0c-aa41-7910ce43e0ce}
+Uuid={d8d3bb18-f17c-4fa2-9fad-3aa00f25913f}
 
 [Data_2_5]
 Comment=By pressing Alt+Ctrl+W a D-Bus call will be performed that will show the minicli. You can use any kind of D-Bus call, just like using the command line 'qdbus' tool.
@@ -243,7 +243,7 @@ TriggersCount=1
 [Data_2_5Triggers0]
 Key=Ctrl+Alt+W
 Type=SHORTCUT
-Uuid={3d7a446a-35c8-4f5c-b847-1334f2e7b316}
+Uuid={a8ee6366-ae22-488f-ab9e-f435324e0bc2}
 
 [Data_2_6]
 Comment=Read the comment on the "Type 'Hello'" action first.\n\nJust like the "Type 'Hello'" action, this one simulates keyboard input, specifically, after pressing Ctrl+Alt+B, it sends B to XMMS (B in XMMS jumps to the next song). The 'Send to specific window' checkbox is checked and a window with its class containing 'XMMS_Player' is specified; this will make the input always be sent to this window. This way, you can control XMMS even if, for instance, it is on a different virtual desktop.\n\n(Run 'xprop' and click on the XMMS window and search for WM_CLASS to see 'XMMS_Player').
@@ -285,7 +285,7 @@ TriggersCount=1
 [Data_2_6Triggers0]
 Key=Ctrl+Alt+B
 Type=SHORTCUT
-Uuid={be862ba3-6457-4657-8c69-cf5f2c8b1ca5}
+Uuid={0499b506-d243-457d-b558-7c57df6a87a2}
 
 [Data_2_7]
 Comment=Konqueror in KDE3.1 has tabs, and now you can also have gestures.\n\nJust press the middle mouse button and start drawing one of the gestures, and after you are finished, release the mouse button. If you only need to paste the selection, it still works, just click the middle mouse button. (You can change the mouse button to use in the global settings).\n\nRight now, there are the following gestures available:\nmove right and back left - Forward (Alt+Right)\nmove left and back right - Back (Alt+Left)\nmove up and back down  - Up (Alt+Up)\ncircle anticlockwise - Reload (F5)\n\nThe gesture shapes can be entered by performing them in the configuration dialog. You can also look at your numeric pad to help you: gestures are recognized like a 3x3 grid of fields, numbered 1 to 9.\n\nNote that you must perform exactly the gesture to trigger the action. Because of this, it is possible to enter more gestures for the action. You should try to avoid complicated gestures where you change the direction of mouse movement more than once.  For instance, 45654 or 74123 are simple to perform, but 1236987 may be already quite difficult.\n\nThe conditions for all gestures are defined in this group. All these gestures are active only if the active window is Konqueror (class contains 'konqueror').
@@ -477,7 +477,7 @@ TriggersCount=1
 [Data_2_8Triggers0]
 Key=Meta+E
 Type=SHORTCUT
-Uuid={243a4505-15ca-4cdd-9bc2-82474103504d}
+Uuid={7ca1ec68-cf75-4e91-8f92-9c8b744f5460}
 
 [Data_3]
 Comment=Shortcuts for taking screenshots
@@ -517,9 +517,9 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_3_1Triggers0]
-Key=
+Key=Print
 Type=SHORTCUT
-Uuid={ebd4d11c-c08a-4d6b-80de-44ce5ecd3d16}
+Uuid={8d620fb0-092e-46f5-a8bb-dd400138c0ef}
 
 [Data_3_2]
 Comment=Take a full screen (all monitors) screenshot and save it
@@ -546,9 +546,9 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_3_2Triggers0]
-Key=
+Key=Shift+Print
 Type=SHORTCUT
-Uuid={7105eea1-f710-439f-9655-fbe8bb382022}
+Uuid={e85fe661-9784-41de-b4ef-caf203218fb3}
 
 [Data_3_3]
 Comment=Take a screenshot of the currently active window and save it
@@ -560,7 +560,7 @@ Type=SIMPLE_ACTION_DATA
 ActionsCount=1
 
 [Data_3_3Actions0]
-Arguments=true, false
+Arguments=true false
 Call=ActiveWindow
 RemoteApp=org.kde.Spectacle
 RemoteObj=/
@@ -575,9 +575,9 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_3_3Triggers0]
-Key=
+Key=Meta+Print
 Type=SHORTCUT
-Uuid={430f4711-4d17-428b-bfd2-7f1c390b1e6c}
+Uuid={a2b10e57-22b3-4470-b13a-972af9e4a1ff}
 
 [Data_3_4]
 Comment=Take a screenshot of a rectangular region you specify and save it
@@ -604,9 +604,9 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_3_4Triggers0]
-Key=
+Key=Meta+Shift+Print
 Type=SHORTCUT
-Uuid={f53add15-77e6-4a61-8531-f1f6d3050b79}
+Uuid={64d124fd-85a9-4ecf-bd99-5b5f87c36448}
 
 [Data_4]
 Comment=Basic Konqueror gestures.
@@ -1012,9 +1012,9 @@ GesturePointData=0,0.0625,-0.5,0.5,1,0.0625,0.0625,-0.5,0.5,0.875,0.125,0.0625,-
 Type=GESTURE
 
 [Data_5]
-Comment=Show/hide Emacs!
+Comment=Comment
 Enabled=true
-Name=Show/Hide Emacs
+Name=Show, Raise, or Hide Emacs
 Type=SIMPLE_ACTION_DATA
 
 [Data_5Actions]
@@ -1033,9 +1033,9 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_5Triggers0]
-Key=
+Key=Meta+Esc
 Type=SHORTCUT
-Uuid={14875902-5327-41be-a994-362901a328a3}
+Uuid={f7f38cbc-9dcc-434f-a565-389a95656a86}
 
 [Gestures]
 Disabled=true
